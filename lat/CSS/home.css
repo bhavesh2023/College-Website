@@ -300,7 +300,10 @@ hr {
 
 @media screen and (max-width: 992px){
 
-
+  .navbar-nav{
+    margin-bottom: 0 !important;
+    padding-top: 10px !important;
+  }
   .desktop{
     display: none;
   }
@@ -334,7 +337,7 @@ hr {
   }
   .nav-link{
     padding-left: 10px !important;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid #52528c;
   }
 }
 
