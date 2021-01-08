@@ -236,7 +236,7 @@ hr {
 }
 
 .clicked{
-  background-color: #52528c !important;
+  background-color: red;
 }
 
 @media screen and (max-width: 800px){
