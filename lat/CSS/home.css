@@ -339,5 +339,8 @@ hr {
     padding-left: 10px !important;
     border-bottom: 2px solid #52528c;
   }
+  .footer-wid-heading{
+    font-size: 18px;
+  }
 }
 
