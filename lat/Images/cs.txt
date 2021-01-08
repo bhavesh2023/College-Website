@@ -1,0 +1,88 @@
+html {
+    overflow-x: hidden;	
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.top{
+    height: 40px;
+    width: 100%;
+    background-color: #000;
+}
+.brand {
+	display: flex;
+	margin-top: 20px;
+	color: white;
+	text-align: center;
+}
+.heading{
+	margin-top: 30px;
+	margin-left: 15px;
+}
+
+.hea{
+	position: absolute;
+	left: 120px;
+}
+.logo{
+	width: 80px;
+	height: 80px;
+	
+}
+.im{
+	width: 100%;
+	height: 85vh;
+}
+.explore{
+    height: 50px;
+	padding-top: 13px;
+    width: 100%;
+    background-color:#b1040e;
+    text-align: center;
+}
+.explore p{
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.containe {
+  position: relative;
+
+}
+
+.imag {
+  opacity: 1;
+  display: block;
+
+
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middl {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.containe:hover .imag {
+  opacity: 0.3;
+}
+
+.containe:hover .middl {
+  opacity: 1;
+}
+
+.tex {
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}

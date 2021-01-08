@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Malaviya National Institute of Technology Jaipur</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="CSS/home.css" type="text/css">
+  </head>
+    <body>
+        <div class="top">
+            
+        </div> 
+		<div class="hea">
+		<div class="brand">
+		<img class="logo" src="Images/logo.png">
+			<div class="heading">
+			  MALAVIYA NATIONAL INSTITUTE OF TECHNOLOGY JAIPUR
+			</div>
+			</div>
+		</div>
+        <div class="slider">
+            <img class="im" src="img7.png">
+        </div>
+        <div class="explore">
+            <p>Explore MNIT</p>
+        </div>
+	<!--Director's Corner-->     
+	<div class="row" style="background-color:#f9f6ef;">
+    <div class="col-sm-6" style=" border-right: 1px solid;border-color: red;text-align:center;">
+      <h1 style="background-color:red;margin-left:20%;margin-right:20%;padding:1px;">Directors Note</h1>
+      <div class="row" style="padding:4px">
+        <div class="col-sm-4">
+          <div class="containe">
+            <img src="Images/Homepage/uday.jpg" class="imag" style="width:100%;padding-bottom:1px;">
+            <div class="middl">
+              <div class="tex">Prof. Udaykumar R Yaragatti
+                Director, MNIT Jaipur</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8" style="text-align:center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id est laborum.</div>
+      </div>
+    </div>
+    <div class="col-sm-6 " style="text-align:center;">
+      <h1 style="background-color:red;margin-left:20%;margin-right:20%;padding:1px">Important Note</h1>
+      <li>anfonaidfocmdaj</li>
+      <li>anfoodnfoodnocndon</li>
+      <li>anfonaidfocmdaj</li>
+      <li>anfoodnfoodnocndon</li>
+      <li>anfonaidfocmdaj</li>
+      <li>anfoodnfoodnocndon</li>
+      <li>anfonaidfocmdaj</li>
+      <li>anfoodnfoodnocndon</li>
+      <li>anfonaidfocmdaj</li>
+      <li>anfoodnfoodnocndon</li>
+    </div>
+  </div>
+</body>
+</html>
