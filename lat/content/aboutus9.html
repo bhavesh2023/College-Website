@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- data aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #4e5340;
+            ;
+            background-color: aliceblue;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+
+        #top_nav {
+            background-color: #95a3a4;
+            color: #4e5340;
+            border-width: 0px 0px 5px 0px;
+            border-color: #4E5340;
+            animation-name: fade_out;
+            animation-delay: -0.2s;
+            animation-iteration-count: 1;
+            animation-duration: 2s;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            background-color: white;
+            margin: auto;
+            padding: 0%;
+
+        }
+
+
+        .wrapper {
+            height: auto;
+            width: 100%;
+            margin-bottom: 0px;
+            background-color: white;
+            margin: auto;
+            padding: 0%;
+            overflow: auto;
+        }
+
+        /*cards styling*/
+
+
+
+        /* sticky */
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: aliceblue;
+            z-index: 10;
+            border: 2px solid rgb(196, 219, 240);
+        }
+
+        /* side nav bar (animaated) */
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 20;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: black;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    /*h1*/
+
+    h1{
+      text-align: center;
+    }
+
+    h4{
+      text-align: center;
+      padding-bottom: 13px;
+    }
+    /*carousel*/
+    .sizecoin{
+      margin-left: 40px;
+      margin-right:40px;
+      padding-top: 20px;
+      padding-bottom:20px;
+
+      height: 400px;
+    }
+    /*main praa*/
+    .pa11{
+      font-size: 24px;
+      margin-left: 40px;
+      margin-right:40px;
+      padding-top: 40px;
+      padding-bottom:40px;
+      font-family:Montserrat;
+    }
+
+  .pa22{
+    padding-left=10px;
+    padding-right=10px;
+    margin-left: 40px;
+    margin-right:40px;
+      font-size: 24px;
+        font-family:Montserrat;
+  }
+  .pa44{
+    text-align: center;
+    padding-left=10px;
+    padding-right=10px;
+    margin-left: 40px;
+    margin-right:40px;
+      font-size: 24px;
+        font-family:Montserrat;
+  }
+
+  /*footer*/
+
+
+#container {
+  width: 100%;
+  height: 330px
+  margin-top: 20px;
+}
+
+#part1 {
+  width: 100%;
+  height: 280px;
+  background-color: #292929
+}
+
+#part2 {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: relative;
+  top: -15px
+}
+
+#companyinfo {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  left: 8%;
+  top: 30px
+}
+
+#sitelink {
+  font-size: 35px;
+  color: #f44336
+}
+
+#sitelink:hover {
+  color: #e65100
+}
+
+#title {
+  color: gray;
+  position: relative;
+  top: 0px;
+  font-size: 14.1px
+}
+
+#detail {
+  color: #aaa7a7;
+  font-size: 16px
+}
+
+#explore {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  top: -235px;
+  left: 29%
+}
+
+#txt1,
+#txt2,
+#txt3,
+#txt4,
+#txt5 {
+  color: white;
+  font-size: 20px
+}
+
+.link {
+  display: flex;
+  width: 90px;
+  height: 40px;
+  color: #aaa7a7;
+  background-color: transparent;
+  border-top: 2px solid white;
+  position: relative;
+  top: -10px
+}
+
+.link:hover,
+.link1:hover {
+  color: #e65100
+}
+
+#visit {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  top: -515px;
+  left: 42%
+}
+
+.text {
+  color: #aaa7a7;
+  font-size: 14px;
+  margin-top: -10px
+}
+
+#legal {
+  width: 14%;
+  height: 280px;
+  position: relative;
+  top: -800px;
+  left: 59.5%
+}
+
+.link1 {
+  display: flex;
+  width: 150px;
+  height: 40px;
+  color: #aaa7a7;
+  background-color: transparent;
+  border-top: 2px solid white;
+  position: relative;
+  top: -10px;
+  margin-top: 7px
+}
+
+#subscribe {
+  position: relative;
+  top: -1080px;
+  left: 78%;
+  width: 14%;
+  height: 280px
+}
+
+#email {
+  color: white;
+  position: relative;
+  top: -20px
+}
+
+.btn {
+  position: relative;
+  top: -10px
+}
+
+#txt5 {
+  position: relative;
+  top: 0px
+}
+
+.social {
+  position: relative;
+  top: -5px;
+  margin-right: 10px;
+  color: white;
+  cursor: pointer
+}
+
+.fa-facebook-square:hover {
+  color: #3B579D
+}
+
+.fa-linkedin:hover {
+  color: #007BB6
+}
+
+.fa-twitter-square:hover {
+  color: #2CAAE1
+}
+
+#txt6 {
+  color: white;
+  position: relative;
+  top: 13px;
+  left: 8%;
+  width: 80%;
+  color: #aaa7a7
+}
+
+.material-icons {
+  position: relative;
+  top: 3px
+}
+
+@media only screen and (max-width:1000px) {
+  #companyinfo {
+      width: 20%
+  }
+
+  #sitelink {
+      font-size: 30px
+  }
+
+  #txt5,
+  #txt4 {
+      font-size: 17px
+  }
+
+  #txt5,
+  .social {
+      position: relative;
+      top: -5px
+  }
+}
+
+@media only screen and (max-width:850px) {
+  #companyinfo {
+      position: relative;
+      left: 3%
+  }
+
+  #txt6 {
+      position: relative;
+      left: 3%
+  }
+
+  #txt1,
+  #txt2,
+  #txt3,
+  #txt4,
+  #txt5 {
+      font-size: 15px
+  }
+
+  #explore {
+      position: relative;
+      top: -240px;
+      left: 26%
+  }
+
+  #sitelink {
+      font-size: 25px
+  }
+
+  #detail {
+      font-size: 13px
+  }
+
+  .link {
+      width: 60px
+  }
+
+  #visit {
+      position: relative;
+      top: -520px;
+      left: 37%
+  }
+
+  .text {
+      font-size: 13px
+  }
+
+  #legal {
+      position: relative;
+      top: -800px;
+      left: 54%
+  }
+
+  #subscribe {
+      position: relative;
+      top: -1080px;
+      left: 76%;
+      width: 20%
+  }
+
+  #txt5,
+  .social {
+      position: relative;
+      left: -110%;
+      top: px
+  }
+
+  #email,
+  .btn {
+      position: relative;
+      top: 0px
+  }
+
+  #part1 {
+      height: 250px
+  }
+}
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- top sticky nav bar-->
+    <!-- navigation bar-->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" id="top_nav">
+
+        <div class="container-fluid" style="color: black">
+            <div class="title"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+            </div>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menue"
+                onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                aria-label="Main Menu">
+                X
+            </button>
+            <div class="navbar-collapse collapse" id="navbar-menue">
+                <div class="navbar-nav ml-auto">
+                    <div class="box1">
+                        <a class="nav-item nav-link" href="./home.php">
+                            <p style="color: black">Home</p>
+                        </a>
+                    </div>
+                    <div class="box2">
+                        <a class="nav-item nav-link" href="./account_control.php">
+                            <p style="color: rgb(54, 54, 54);">Account Control<br></p>
+                        </a>
+                    </div>
+                    <div class="box2">
+                        <a class="nav-item nav-link" href="./account_control.php">
+                            <p style="color: rgb(54, 54, 54);">Account Control<br></p>
+                        </a>
+                    </div>
+                    <div class="box2">
+                        <a class="nav-item nav-link" href="./account_control.php">
+                            <p style="color: rgb(54, 54, 54);">Account Control<br></p>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="line"></div>
+
+    <!-- side navigation bar-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+    <div class="m-4">
+
+    <div>
+        <h1 >Department of Computer Science and Engineering</h1>
+
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class='sizecoin'>
+      <img class="d-block w-100 img-fluid" src="p6.jpg" alt="First slide">
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class='sizecoin'>
+      <img class="d-block w-100 img-fluid" src="p7.jfif" alt="Second slide">
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class='sizecoin'>
+      <img class="d-block w-100 img-fluid" src="p8.jfif" alt="Third slide">
+    </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="pa11">
+  <p>Department of Computer Science & Engineering came into existence in 1994. The first degree program offered by the Department was B.E. (Computer Engineering) in affiliation with University of Rajasthan. The first batch graduated in 1996. Another degree programme BE (Information Technology) was initiated in 2001. Since 2004 after MREC was granted status of deemed university and included as NIT (National Institute of Technology), all BE programmes came to be known as B. Tech. In January 2004, first admissions to PhD programme took place. In 2008, M. Tech. (Computer Engineering) programme was initiated. At present, Computer Engineering Department is offering following degree programmes:
+<li>
+
+B.Tech (Computer Engineering)</li>
+<li>M.Tech (Computer Engineering)</li>
+<li>Ph. D</li>
+Faculty at Computer Engineering believes in open interaction with students who are encouraged to participate in academic, research and extra-curricular activities. Students have never misplaced trust put in them by department and have done well in academic and industry alike.</p>
+</div>
+<div class="row justify-content-md-center">
+   <div class="col col-lg-12">
+     <h4 >Department Vision & Mission</h4>
+   </div>
+
+ </div>
+ <div class="row justify-content-md-center">
+    <div class="col col-lg-6">
+      <h4 >Vision Statement</h4>
+      <p class='pa22'>
+        To be a Centre of Excellence in Computer Science and Engineering domain and work with industry on cutting edge technology to address current and emerging challenges in global perspective for the development of society.
+      </p>
+    </div>
+    <div class="col col-lg-6">
+      <h4 >Mission Statement</h4>
+      <p class='pa22'>
+        To impart quality engineering education, enhance problem solving skills, foster research and innovation, encourage entrepreneurship and mold students of integrity and ethics to provide leadership with social sensitivity for the betterment of the country and humanity as a whole.
+
+      </p>
+    </div >
+
+  </div>
+
+  <div style="margin-top:20px; margin-bottom:20px;" >
+    <h4 >Contact Information </h4>
+    <div class="pa44">
+
+Dr. Pilli Emmanuel Shubhakar<br>
+
+Head, Department of Computer Science & Engineering<br>
+Malaviya National Institute of Technology<br>
+JLN Marg, Jaipur-302017<br>
+Phone no: 0141-2713340, 2529154<br>
+E-mail: hod.cse@mnit.ac.in<br>
+
+</div>
+  </div>
+  <div id="container">
+          <div id="part1">
+              <div id="companyinfo"> <h1 id="sitelink" >MNIT </h1>
+                  <p id="title">Best Collage around </p>
+                  <p id="detail">We provide you all the necessary resource so that you Svadhaya never stops.</p>
+              </div>
+              <div id="explore">
+                  <p id="txt1">Explore</p> <a class="link" href="#">Home</a> <a class="link" href="#">About</a> <a class="link" href="#">Login</a> <a class="link" href="#">SignUp</a>
+              </div>
+              <div id="visit">
+                  <p id="txt2">Visit</p>
+                  <p class="text">Malaviya National Institute of Technology </p>
+                  <p class="text">Malaviya  Nagar  </p>
+                  <p class="text">Jaipur 302017</p>
+                  <p class="text">Rajasthan India </p>
+                  <p class="text">PH no. +91 123561676</p>
+              </div>
+              <div id="legal">
+                  <p id="txt3">Our Services</p> <a class="link1" href="#">Text to Speech</a> <a class="link1" href="#">Speech to text</a>
+              </div>
+              <div id="subscribe">
+                  <p id="txt4">Mail Us at</p>
+                  <p class="text">Neelubhaiya@gmail.com </p>
+                  <p id="txt5">Connect With US</p> <i class="fab fa-facebook-square social fa-2x"></i> <i class="fab fa-linkedin social fa-2x"></i> <i class="fab fa-twitter-square social fa-2x"></i>
+              </div>
+          </div>
+          <div id="part2">
+              <p id="txt6"><i class="material-icons tiny"> copyright </i>copyright 2019 Neelubhaiya - All right reserved</p>
+          </div>
+      </div>
+
+</body>
+
+</html>

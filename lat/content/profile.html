@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- data aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #4e5340;
+            ;
+            background-color: aliceblue;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+
+        #top_nav {
+            background-color: #95a3a4;
+            color: #4e5340;
+            border-width: 0px 0px 5px 0px;
+            border-color: #4E5340;
+            animation-name: fade_out;
+            animation-delay: -0.2s;
+            animation-iteration-count: 1;
+            animation-duration: 2s;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        .container {
+            height: 100%;
+            width: 80%;
+            background-color: white;
+            margin: auto;
+            padding: 0%;
+
+        }
+
+
+        .wrapper {
+            height: auto;
+            width: 100%;
+            margin-bottom: 0px;
+            background-color: white;
+            margin: auto;
+            padding: 0%;
+            overflow: auto;
+        }
+
+        /*cards styling*/
+
+        .card {
+            height: auto;
+            z-index: 0;
+            width: 100%;
+            margin: auto;
+            background-color: aliceblue;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .card_left {
+            float: right;
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            background-color: white;
+        }
+
+        .card_right {
+            height: auto;
+            width: 100%;
+            margin: auto;
+        }
+
+
+        /*line*/
+        .line {
+            background-color: rgb(196, 219, 240);
+            width: auto;
+            height: 2px;
+        }
+
+        /* sticky */
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: aliceblue;
+            z-index: 10;
+            border: 2px solid rgb(196, 219, 240);
+        }
+
+        /* side nav bar (animaated) */
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 20;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: black;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- top sticky nav bar-->
+    <!-- navigation bar-->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top" id="top_nav">
+
+        <div class="container-fluid" style="color: black">
+            <div class="title"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+            </div>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menue"
+                onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                aria-label="Main Menu">
+                X
+            </button>
+            <div class="navbar-collapse collapse" id="navbar-menue">
+                <div class="navbar-nav ml-auto">
+                    <div class="box1">
+                        <a class="nav-item nav-link" href="./home.php">
+                            <p style="color: black">Home</p>
+                        </a>
+                    </div>
+                    <div class="box2">
+                        <a class="nav-item nav-link" href="./account_control.php">
+                            <p style="color: rgb(54, 54, 54);">Account Control<br></p>
+                        </a>
+                    </div>
+                    <div class="box2">
+                        <a class="nav-item nav-link" href="./account_control.php">
+                            <p style="color: rgb(54, 54, 54);">Account Control<br></p>
+                        </a>
+                    </div>
+                    <div class="box2">
+                        <a class="nav-item nav-link" href="./account_control.php">
+                            <p style="color: rgb(54, 54, 54);">Account Control<br></p>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="line"></div>
+
+    <!-- side navigation bar-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+    <div class="m-4">
+
+        <!-- Modal storge-->
+        <div id="myModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirmation</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you want to save changes you made to document before closing?</p>
+                        <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div class="container">
+
+            <div class="sticky">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-3"><a href="./profile.html#faculty">Faculty</a></div>
+                        <div class="col-sm-3"><a href="./profile.html#staff">Staff</a></div>
+                        <div class="col-sm-3"><a href="./profile.html#faculty">Teacher</a></div>
+                        <div class="col-sm-3"><a href="./profile.html#faculty">PHD scholars</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faculty" id="faculty">
+                <h1>
+                    The faculties of Mnit
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio tempore nam, eligendi delectus
+                    ullam illo doloremque at voluptate autem itaque consequuntur dolore vero doloribus id, natus vitae
+                    totam
+                    praesentium.
+                </p>
+
+
+                <h2>
+                    Head of the department
+                </h2>
+                <div class="line"></div>
+                <br>
+
+                <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-offset="0">
+
+                    <div class="card_left">
+
+                    </div>
+                    <br>
+                    <div class="line"></div>
+
+                    <div class="card_right">
+                        <h1>Elon Musk</h1>
+                        <ul style="margin-left:20px">
+                            <li>
+                                Fouder of tesla
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                doloribus autem accusantium voluptate amet tenetur?
+                            </li>
+                            <li>
+                                Fouder of tesla
+                            </li>
+                        </ul>
+                        <!-- Button HTML (to Trigger Modal) -->
+                        <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                        <div class="card_right_name">
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    Professor-HAG
+                </h2>
+                <div class="line"></div>
+                <br>
+                <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
+                    data-aos-offset="0">
+
+                    <div class="card_left">
+
+                    </div>
+                    <br>
+                    <div class="line"></div>
+
+                    <div class="card_right">
+                        <h1>Elon Musk</h1>
+                        <ul style="margin-left:20px">
+                            <li>
+                                Fouder of tesla
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                doloribus autem accusantium voluptate amet tenetur?
+                            </li>
+                            <li>
+                                Fouder of tesla
+                            </li>
+                        </ul>
+                        <!-- Button HTML (to Trigger Modal) -->
+                        <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                        <div class="card_right_name">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
+                    data-aos-offset="0">
+
+                    <div class="card_left">
+
+                    </div>
+                    <br>
+                    <div class="line"></div>
+
+                    <div class="card_right">
+                        <h1>Elon Musk</h1>
+                        <ul style="margin-left:20px">
+                            <li>
+                                Fouder of tesla
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                doloribus autem accusantium voluptate amet tenetur?
+                            </li>
+                            <li>
+                                Fouder of tesla
+                            </li>
+                        </ul>
+                        <!-- Button HTML (to Trigger Modal) -->
+                        <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                        <div class="card_right_name">
+
+                        </div>
+                    </div>
+                </div>
+
+                <h2>
+                    Professor
+                </h2>
+                <div class="line"></div>
+                <br>
+
+                <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
+                    data-aos-offset="0">
+
+                    <div class="card_left">
+
+                    </div>
+                    <br>
+                    <div class="line"></div>
+
+                    <div class="card_right">
+                        <h1>Elon Musk</h1>
+                        <ul style="margin-left:20px">
+                            <li>
+                                Fouder of tesla
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                doloribus autem accusantium voluptate amet tenetur?
+                            </li>
+                            <li>
+                                Fouder of tesla
+                            </li>
+                        </ul>
+                        <!-- Button HTML (to Trigger Modal) -->
+                        <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                        <div class="card_right_name">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="faculty" id="staff">
+                    <h1>
+                        The staffs of MNIT
+                    </h1>
+                    <p>
+                        very good people.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio tempore nam, eligendi
+                        delectus
+                        ullam illo doloremque at voluptate autem itaque consequuntur dolore vero doloribus id, natus
+                        vitae
+                        totam
+                        praesentium.
+                    </p>
+
+
+                    <h2>
+                        staff head
+                    </h2>
+                    <div class="line"></div>
+                    <br>
+
+                    <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
+                        data-aos-offset="0">
+
+                        <div class="card_left">
+
+                        </div>
+                        <br>
+                        <div class="line"></div>
+
+                        <div class="card_right">
+                            <h1>Elon Musk</h1>
+                            <ul style="margin-left:20px">
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                    ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                    doloribus autem accusantium voluptate amet tenetur?
+                                </li>
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                            </ul>
+                            <!-- Button HTML (to Trigger Modal) -->
+                            <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                            <div class="card_right_name">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <h2>
+                        staff-HAG
+                    </h2>
+                    <div class="line"></div>
+                    <br>
+                    <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
+                        data-aos-offset="0">
+
+                        <div class="card_left">
+
+                        </div>
+                        <br>
+                        <div class="line"></div>
+
+                        <div class="card_right">
+                            <h1>Elon Musk</h1>
+                            <ul style="margin-left:20px">
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                    ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                    doloribus autem accusantium voluptate amet tenetur?
+                                </li>
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                            </ul>
+                            <!-- Button HTML (to Trigger Modal) -->
+                            <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                            <div class="card_right_name">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
+                        data-aos-offset="0">
+
+                        <div class="card_left">
+
+                        </div>
+                        <br>
+                        <div class="line"></div>
+
+                        <div class="card_right">
+                            <h1>Elon Musk</h1>
+                            <ul style="margin-left:20px">
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                    ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                    doloribus autem accusantium voluptate amet tenetur?
+                                </li>
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                            </ul>
+                            <!-- Button HTML (to Trigger Modal) -->
+                            <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                            <div class="card_right_name">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>
+                        Normal Staff
+                    </h2>
+                    <div class="line"></div>
+                    <br>
+
+                    <div class="card" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" 
+                        data-aos-offset="0">
+
+                        <div class="card_left">
+
+                        </div>
+                        <br>
+                        <div class="line"></div>
+
+                        <div class="card_right">
+                            <h1>Elon Musk</h1>
+                            <ul style="margin-left:20px">
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis id eaque ab velit
+                                    ducimus voluptates dolorem modi, atque incidunt iste aliquam, maxime nostrum omnis
+                                    doloribus autem accusantium voluptate amet tenetur?
+                                </li>
+                                <li>
+                                    Fouder of tesla
+                                </li>
+                            </ul>
+                            <!-- Button HTML (to Trigger Modal) -->
+                            <a href="#myModal" class="btn btn-primary btn-sm" data-toggle="modal">Launch Demo Modal</a>
+
+
+                            <div class="card_right_name">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script>
+            $(document).ready(function () {
+                function alignModal() {
+                    var modalDialog = $(this).find(".modal-dialog");
+
+                    // Applying the top margin on modal to align it vertically center
+                    modalDialog.css("margin-top", Math.max(0, ($(window).height() - modalDialog.height()) /
+                        2));
+                }
+                // Align modal when it is displayed
+                $(".modal").on("shown.bs.modal", alignModal);
+
+                // Align modal when user resize the window
+                $(window).on("resize", function () {
+                    $(".modal:visible").each(alignModal);
+                });
+            });
+        </script>
+
+        <script>
+            AOS.init();
+        </script>
+
+
+</body>
+
+</html>
