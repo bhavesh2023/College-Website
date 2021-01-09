@@ -277,7 +277,7 @@ hr {
 }
 
 @media screen and (max-width: 767px){
-.photos{margin-left: 15%;}
+.photos{margin-left: 8%;}
   .pp-desktop{
     display: none !important;
   }
