@@ -49,10 +49,7 @@
 
 <body>
 
-  <div class="top-bar"><div id="google_translate_element"></div>
-    <div id="#theme1"></div>
-    <div id="#theme2#></div>
-  </div>
+  <div class="top-bar"><div id="google_translate_element"></div></div>
   <!--Header and Navigation Bar Start-->
 
   <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -392,15 +389,6 @@
       </div>
     </div>
   </div>
-  
-  <div class="director-corner row">
-      <p style="width: 100%; background-color: #7c9eb2;" class="direct-heading">Director's Corner</p>
-      <br>
-      <div class="inside row">
-        <img class="col-2 d-im" src="Images/Homepage/direc.jpg">
-        <div class="col-9 direct-cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur consequat dignissim. Maecenas tristique fermentum lorem sit amet molestie. Donec nec gravida sapien. Curabitur facilisis placerat magna, consectetur feugiat neque consectetur quis. Donec at neque id massa placerat pellentesque. Ut vehicula commodo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur consequat dignissim. Maecenas tristique fermentum lorem sit amet molestie. Donec nec gravida sapien. Curabitur facilisis placerat magna, consectetur feugiat neque consectetur quis. Donec at neque id massa placerat pellentesque. Ut vehicula commodo</div>
-      </div>
-  </div>
 
 
 
@@ -513,8 +501,6 @@
 
 
   <!--Scripts-->
-                      
-        
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
@@ -525,30 +511,34 @@ function googleTranslateElementInit() {
   <script>
     var slideIndex = 1;
     showSlides(slideIndex);
-    
+
     function plusSlides(n) {
       showSlides(slideIndex += n);
     }
-    
+
     function currentSlide(n) {
       showSlides(slideIndex = n);
     }
-    
+
     function showSlides(n) {
       var i;
       var slides = document.getElementsByClassName("mySlides");
       // var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
       for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+        slides[i].style.height = "none";
       }
       // for (i = 0; i < dots.length; i++) {
       //     dots[i].className = dots[i].className.replace(" active", "");
       // }
-      slides[slideIndex-1].style.display = "block";  
+      slides[slideIndex - 1].style.display = "block";
     }
-    </script>
+  </script>
 
   <script>
     $(".nav-link").click(function () {
@@ -580,7 +570,28 @@ function googleTranslateElementInit() {
       }
     });
   </script>
+<script>
+$('#theme1' ).click(function (){
+$('#nav').addClass("red");
+$('.direct-heading').addClass("red");
+$('.board-nav').addClass("red");
+$('.news-text').addClass("red");
 
+});
+$('#theme2').click(function () {
+if ( $('#nav').hasClass("red");){
+)
+$('#nav').addClass("red");
+}
+if ($('.direct-heading').hasClass("red");){
+$('.direct-heading').addClass("red");}
+if($('.board-nav').hasClass("red");)
+{ $('.board-nav').addClass("red"); }
+if ($('.news-text').hasClass("red");)
+{ $('.news-text').addClass("red");}
+});
+
+</script>
   <script>
     AOS.init();
   </script>
