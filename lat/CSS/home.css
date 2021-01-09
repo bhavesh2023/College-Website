@@ -5,7 +5,7 @@
 .top-bar{
   width: 100%;
   background-color: #52528c;
-  height: 30px;
+  height: 40px;
 }
 
 ul{
@@ -56,7 +56,7 @@ nav{
 }
 
 .d-block{
-  height: calc(100vh - 121px);
+  height: calc(100vh - 131px);
 }
 
 
@@ -195,10 +195,6 @@ hr {
   padding-top: 10px;
 }
 
-.footer-wid-heading:hover{
-  cursor: pointer;
-}
-
 .foot-links{
   padding-left: 0;
   border-right: 2px solid #52528c;
@@ -236,7 +232,12 @@ hr {
 }
 
 .clicked{
-  background-color: red;
+  background-color: #52528c !important;
+}
+
+.board-content a:before{
+  content: "\00BB";
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 800px){
@@ -292,6 +293,10 @@ hr {
 }
 
 @media screen and (max-width: 500px){
+  .d-block{
+    height: 400px;
+  }
+  
   .but{
     padding-left: 2%;
     padding-right: 2%;
@@ -299,6 +304,10 @@ hr {
 }
 
 @media screen and (max-width: 992px){
+  .footer-wid-heading:hover{
+    cursor: pointer;
+  }
+  
 
   .navbar-nav{
     margin-bottom: 0 !important;
@@ -340,7 +349,8 @@ hr {
     border-bottom: 2px solid #52528c;
   }
   .footer-wid-heading{
-    font-size: 20px;
+    font-size: 18px;
+    padding-left: 5px;
   }
 }
 
