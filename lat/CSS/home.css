@@ -15,10 +15,10 @@
 #google_translate_element{
   color: black !important;
   margin-left: 30%;
-  margin-top: 9px;
 }
 
 .top-bar{
+  padding-top: 10px;
   width: 100%;
   background-color: #52528c;
   height: 40px;
