@@ -273,15 +273,15 @@ hr {
 }
 
 .pp-mobile{
-  display: none;
+  display: none !important;
 }
 
 @media screen and (max-width: 767px){
   .pp-desktop{
-    display: none;
+    display: none !important;
   }
   .pp-mobile{
-    display: block;
+    display: block !important;
   }
   .mySlides {display: none;}
 img {vertical-align: middle;}
