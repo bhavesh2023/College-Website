@@ -5,6 +5,9 @@
 .dropdown-item{
   color: black !important;
 }
+.goog-te-banner-frame{
+  display: none !important;
+}
 .goog-te-gadget-icon{
   display: none !important;
 }
