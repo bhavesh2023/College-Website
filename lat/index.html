@@ -49,7 +49,10 @@
 
 <body>
 
-  <div class="top-bar"><div id="google_translate_element"></div></div>
+  <div class="top-bar"><div id="google_translate_element"></div>
+    <div id="#theme1"></div>
+    <div id="#theme2#></div>
+  </div>
   <!--Header and Navigation Bar Start-->
 
   <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -510,6 +513,25 @@
 
 
   <!--Scripts-->
+                      
+                  $('#theme1' ).click(function (){
+$('#nav').addClass("red");
+$('.direct-heading').addClass("red");
+$('.board-nav').addClass("red");
+$('.news-text').addClass("red");
+
+});
+$('#theme2').click(function () {
+if ( $('#nav').hasClass("red");){
+)
+$('#nav').addClass("red");
+}
+if ($('.direct-heading').hasClass("red");){
+$('.direct-heading').addClass("red");}
+if($('.board-nav').hasClass("red");){ $('.board-nav').addClass("red"); }
+if ($('.news-text').hasClass("red");)
+{ $('.news-text').addClass("red");}
+});
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
