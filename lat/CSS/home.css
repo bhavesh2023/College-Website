@@ -159,7 +159,7 @@ a:hover{
 }
 
 hr {
-  border-top: 1px solid #000;
+  border-top: 1px solid #000 !important;
 }
 
 .footer{
