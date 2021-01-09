@@ -296,7 +296,7 @@ hr {
   .d-block{
     height: 400px;
   }
-  
+
   .but{
     padding-left: 2%;
     padding-right: 2%;
@@ -307,7 +307,7 @@ hr {
   .footer-wid-heading:hover{
     cursor: pointer;
   }
-  
+
 
   .navbar-nav{
     margin-bottom: 0 !important;
@@ -331,7 +331,7 @@ hr {
 
   .foot-links{
     display: none;
-    
+
   }
 
   .mobile{
@@ -353,4 +353,3 @@ hr {
     padding-left: 5px;
   }
 }
-
