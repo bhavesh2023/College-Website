@@ -2,6 +2,15 @@
   color: white !important;
 }
 
+.dropdown-item{
+  color: black !important;
+}
+
+#google_translate_element{
+  color: black !important;
+  margin-left: 30%;
+}
+
 .top-bar{
   width: 100%;
   background-color: #52528c;
