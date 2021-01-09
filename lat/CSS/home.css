@@ -10,10 +10,7 @@ background-color: #7c9eb2 !important;}
 width: 20px;
 height: 20px;
 background-color: red !important;}
-.blue{
-background-color: #7c9eb2 !important;}
-.red{
-background-color: red !important;}
+
 
 .dropdown-item{
   color: black !important;
@@ -87,6 +84,7 @@ background-color: red !important;}
   width: 100%;
   background-color: #52528c;
   height: 40px;
+  display: flex;
 }
 
 ul{
