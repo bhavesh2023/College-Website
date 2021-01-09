@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
 
     <!-- data aos-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -181,6 +180,18 @@
       margin-bottom:10px;
       height: 400px
     }
+
+    img{
+
+object-fit: cover !important;
+margin-left: auto;
+margin-right:auto;
+height: 250px;
+    }
+    .carousel-item {
+
+      height:400px;
+    }
     /*main praa*/
     .pa11{
       padding:28px;
@@ -191,6 +202,7 @@
 
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       font-family:Montserrat;
+      margin-top:20px;
     }
 
   .pa22{
@@ -264,6 +276,74 @@
     color: white;
     font-size: 2.6vh;
   }
+  .footer{
+    margin-top: 100px;
+    background-color: #000;
+    width: 100%;
+    padding: 50px 0 30px 0 !important;
+  }
+
+  .part1, .part2{
+    width: 90%;
+    margin-right: 5% !important ;
+    margin-left: 5% !important;
+  }
+  .part2{
+    color: grey !important;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .part1{
+    padding-bottom: 30px;
+    border-bottom: 2px solid #52528c;
+  }
+
+  .footer-wid-heading{
+    border-top: 2px solid #52528c;
+    border-bottom: 2px solid #52528c;
+    border-right: 2px solid #52528c;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .foot-links{
+    padding-left: 0;
+    border-right: 2px solid #52528c;
+  }
+
+  .foot-links li{
+    padding: 10px 10px 10px 5px;
+  }
+
+
+
+  .social .foot-items{
+    margin-right: 15%;
+  }
+
+  .add{
+    font-size: 14px;
+    margin-left: 12px;
+  }
+
+  .coll{
+    margin-bottom: 0;
+  }
+
+  .fa-map-marked-alt{
+    padding-top: 10px;
+  }
+
+  .location{
+    display: flex;
+  }
+
+  .mobile{
+    display: none;
+  }
   .text {
     color: #aaa7a7;
     font-size: 2.1vh;
@@ -279,19 +359,151 @@
   .part1{
     font-size:20px;}
 .carousel-control-prev{
-    background: rgba( 255, 255, 255, 0.25 );
+  margin-left: 8%;
+  margin-right:8%;    background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;    
+    border-radius: 10px;
         }
  .carousel-control-next{
+   margin-left: 8%;
+   margin-right:8%;
         background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px; 
+    border-radius: 10px;
         }
+  .carousel-item{
+    overflow:hidden;
+  }
+  .foot-items{
+    color:white;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
+  }
+
+  @media screen and (max-width: 800px){
+    .news, .notice-board{
+      width: 90%;
+      margin-left: 5% !important;
+      margin-right: 5% !important;
+    }
+    .board-box{
+      width: 95%;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+    }
+  }
+
+  @media screen and (max-width: 580px){
+    .news, .notice-board{
+      width: 98%;
+      margin-left: 1% !important;
+      margin-right: 1% !important;
+    }
+    .news-items{
+      width: 100%;
+    }
+  }
+
+  .fa-sign-in{
+    display: none;
+  }
+
+  @media screen and (min-width: 992px){
+    .social{
+      padding-bottom: 25px !important;
+    }
+    .navbar-nav{
+      position: absolute;
+      right: 5%;
+    }
+    /* #n-links{
+      display: block;
+    } */
+  }
+
+  @media screen and (max-width: 400px){
+    .heading{
+      display: none;
+    }
+    #n-links{
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    .d-block{
+      height: 400px;
+    }
+
+    .but{
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+  }
+
+  @media screen and (max-width: 992px){
+    .footer-wid-heading:hover{
+      cursor: pointer;
+    }
+
+
+    .navbar-nav{
+      margin-bottom: 0 !important;
+      padding-top: 10px !important;
+    }
+    .desktop{
+      display: none;
+    }
+
+    .dis{
+      display: block !important;
+    }
+
+    .add{
+      padding-top: 10px;
+    }
+
+    .coll{
+      display: block !important;
+    }
+
+    .foot-links{
+      display: none;
+
+    }
+
+    .mobile{
+      display: block;
+    }
+
+    .fa-sign-in{
+      display: block;
+      float: right;
+      margin-right: 5%;
+      margin-top: 7px;
+    }
+    .nav-link{
+      padding-left: 10px !important;
+      border-bottom: 2px solid #52528c;
+    }
+    .footer-wid-heading{
+      font-size: 18px;
+      padding-left: 5px;
+    }
+
+
+  }
+
 /*
 #container {
   width: 100%;
@@ -647,18 +859,18 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
+
+      <img class="d-block img-fluid w-90" src="images/img6.jpg" alt="First slide">
+
+    </div>
+    <div class="carousel-item">
       <div class='sizecoin'>
-      <img class="d-block w-100 img-fluid" src="images/img6.jpg" alt="First slide">
+      <img class="d-block img-fluid w-90" src="images/img7.jpg" alt="Second slide">
     </div>
     </div>
     <div class="carousel-item">
       <div class='sizecoin'>
-      <img class="d-block w-100 img-fluid" src="images/img7.jpg" alt="Second slide">
-    </div>
-    </div>
-    <div class="carousel-item">
-      <div class='sizecoin'>
-      <img class="d-block w-100 img-fluid" src="images/img8.jpg" alt="Third slide">
+      <img class="d-block img-fluid w-90" src="images/img8.jpg" alt="Third slide">
     </div>
     </div>
   </div>
@@ -717,51 +929,108 @@ E-mail: hod.cse@mnit.ac.in<br>
 
 </div>
   </div>
-  <div id="container">
-      <div id="part1">
-        <div id="companyinfo">
-          <h1 id="sitelink">MNIT</h1>
-          <p id="title">Best Collage around</p>
-          <p id="detail">
-            We provide you all the necessary resource so that you Svadhaya never
-            stops.
-          </p>
+
+    <div class="footer desktop">
+      <div class="part1 row">
+        <div class="foot-wid Quick Links col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">Useful Links</p>
+          <ul class="foot-links" data-aos="fade-up">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
         </div>
-        <div id="explorem">
-          <p id="txt1">Explore</p>
-          <a class="link" href="#">Home</a><br><br> <a class="link" href="#">About</a><br><br>
-          <a class="link" href="#">Login</a><br><br> <a class="link" href="#">SignUp</a>
+        <div class="foot-wid portals col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">Portals</p>
+          <ul class="foot-links" data-aos="fade-up">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
         </div>
-        <div id="visit">
-          <p id="txt2">Visit</p>
-          <p class="text">Malaviya National Institute of Technology</p>
-          <p class="text">Malaviya Nagar</p>
-          <p class="text">Jaipur 302017</p>
-          <p class="text">Rajasthan India</p>
-          <p class="text">PH no. +91 123561676</p>
+        <div class="foot-wid explore col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">Explore</p>
+          <ul class="foot-links" data-aos="fade-up">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+
+          </ul>
         </div>
-        <div id="legal">
-          <p id="txt3">Our Services</p>
-          <a class="link1" href="#">Text to Speech</a><br><br>
-          <a class="link1" href="#">Speech to text</a>
+        <div class="foot-wid contact col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">MNIT Jaipur</p>
+          <ul class="foot-links coll" data-aos="fade-up">
+            <li>
+              <a class="location" href="#"><i class="fas fa-map-marked-alt fa-2x"></i>
+                <p class="add">Jawahar Lal Nehru Marg, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan</p>
+              </a>
+            </li>
+            <li class="social"><a class="foot-items" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </li>
+          </ul>
         </div>
-        <div id="subscribe">
-          <p id="txt4">Mail Us at</p>
-          <p class="text">Neelubhaiya@gmail.com</p>
-          <p id="txt5">Connect With US</p>
-          <i class="fab fa-facebook-square social fa-2x"></i>
-          <i class="fab fa-linkedin social fa-2x"></i>
-          <i class="fab fa-twitter-square social fa-2x"></i>
-        </div>
+
       </div>
-      <div id="part2">
-        <p id="txt6">
-          <i class="material-icons tiny"> copyright </i>copyright 2019
-          Neelubhaiya - All right reserve
-        </p>
+      <div class="part2">
+        © 2021 Malaviya National Institute of Technology Jaipur, Rajasthan, India. All rights reserved.
       </div>
     </div>
-        
+
+    <div class="footer mobile">
+      <div class="part1 row">
+        <div class="foot-wid Quick Links col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading foot-h1">Useful Links <i class="fa fa-sign-in" aria-hidden="true"></i></p>
+          <ul class="foot-links foot-l1">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="foot-wid portals col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading foot-h2">Portals <i class="fa fa-sign-in" aria-hidden="true"></i></p>
+          <ul class="foot-links foot-l2">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="foot-wid explore col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading foot-h3">Explore <i class="fa fa-sign-in" aria-hidden="true"></i></p>
+          <ul class="foot-links foot-l3">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+
+          </ul>
+        </div>
+        <div class="foot-wid contact col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading">MNIT Jaipur</p>
+          <ul class="foot-links coll">
+            <li>
+              <a class="location" href="#"><i class="fas fa-map-marked-alt fa-2x"></i>
+                <p class="add">Jawahar Lal Nehru Marg, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan</p>
+              </a>
+            </li>
+            <li class="social"><a class="foot-items" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="part2">
+        © 2021 Malaviya National Institute of Technology Jaipur, Rajasthan, India. All rights reserved.
+      </div>
+    </div>
         <script>
    AOS.init();
 </script>
