@@ -70,7 +70,7 @@ a:hover{
   margin-top: 50px;
   background-color: grey;
   width: 80%;
-  margin-left: 10%;
+  margin-left: 10% !important;
   border-radius: 10px;
 }
 .news-items{
@@ -166,13 +166,13 @@ hr {
   margin-top: 100px;
   background-color: #000;
   width: 100%;
-  padding: 50px 0 30px 0;
+  padding: 50px 0 30px 0 !important;
 }
 
 .part1, .part2{
   width: 90%;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 5% !important ;
+  margin-left: 5% !important;
 }
 .part2{
   color: grey !important;
