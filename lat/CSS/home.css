@@ -277,7 +277,6 @@ hr {
 }
 
 @media screen and (max-width: 767px){
-.photos{margin-left: 8%;}
   .pp-desktop{
     display: none !important;
   }
@@ -310,8 +309,7 @@ img {vertical-align: middle;}
   user-select: none;
   background-color: #000;
 }
-.next{right: 0 !important;}
-.prev{left: -10px !important;}
+
 
 /* Position the "next button" to the right */
 .next {
