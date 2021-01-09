@@ -4,7 +4,9 @@
 #theme1{
 width: 20px;
 height: 20px;
-background-color: #7c9eb2 !important;}
+background-color: #7c9eb2 !important;
+margin-left: 15px;
+margin-right: 15px;}
 
 #theme2{
 width: 20px;
