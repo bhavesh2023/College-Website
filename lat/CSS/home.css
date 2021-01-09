@@ -6,6 +6,10 @@
   color: black !important;
 }
 
+.goog-te-menu-value span{
+  color: black !important;
+}
+
 #google_translate_element{
   color: black !important;
   margin-left: 30%;
