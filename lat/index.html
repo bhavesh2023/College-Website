@@ -53,6 +53,7 @@
   <div class="top-bar"><div id="google_translate_element"></div>
     <div id="theme1"></div>
     <div id="theme2"></div>
+    <div id="theme3"></div>
   </div>
   <!--Header and Navigation Bar Start-->
 
@@ -508,7 +509,26 @@
   </div>
 
   <!--Footer End-->
-
+  <script>
+    $("#theme1").click(function() {
+      $("#nav").addClass("blue");
+      $(".direct-heading").addClass("blue");
+      $(".board-nav").addClass("blue");
+      $(".news-text").addClass("blue");
+    });
+    $("#theme2").click(function() {
+      $("#nav").addClass("red");
+      $(".direct-heading").addClass("red");
+      $(".board-nav").addClass("red");
+      $(".news-text").addClass("red");
+    });
+    $("#theme3").click(function() {
+      $("#nav").addClass("orange");
+      $(".direct-heading").addClass("orange");
+      $(".board-nav").addClass("orange");
+      $(".news-text").addClass("orange");
+    });
+  </script>
 
 
   <!--Scripts-->
