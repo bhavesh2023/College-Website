@@ -145,7 +145,7 @@ body{
 }
 
 #nav{
-  background-color: #7c9eb2;
+  background-color: #7c9eb2 !important;
 }
 
 nav{
