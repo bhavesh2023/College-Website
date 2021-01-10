@@ -21,6 +21,10 @@ height: 20px;
 background-color: #F56320 !important;
 }
 
+#theme3:hover, #theme1:hover, #theme2:hover{
+cursor: pointer;
+}
+
 .blue{
 background-color: #7c9eb2 !important;
 }
