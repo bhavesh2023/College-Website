@@ -21,6 +21,18 @@ height: 20px;
 background-color: #F56320 !important;
 }
 
+.blue{
+background-color: #7c9eb2 !important;
+}
+
+.red{
+background-color: #c21717 !important;
+}
+
+.orange{
+background-color: #F56320 !important;
+}
+
 
 .dropdown-item{
   color: black !important;
