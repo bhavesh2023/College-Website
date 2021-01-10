@@ -53,7 +53,6 @@
   <div class="top-bar"><div id="google_translate_element"></div>
     <div id="theme1"></div>
     <div id="theme2"></div>
-    <div id="theme3"></div>
   </div>
   <!--Header and Navigation Bar Start-->
 
@@ -510,26 +509,25 @@
 
   <!--Footer End-->
   <script>
-    $("#theme1").click(function() {
-      $("#nav").addClass("blue");
-      $(".direct-heading").addClass("blue");
-      $(".board-nav").addClass("blue");
-      $(".news-text").addClass("blue");
-    });
-    $("#theme2").click(function() {
-      $("#nav").addClass("red");
-      $(".direct-heading").addClass("red");
-      $(".board-nav").addClass("red");
-      $(".news-text").addClass("red");
-    });
-    $("#theme3").click(function() {
-      $("#nav").addClass("orange");
-      $(".direct-heading").addClass("orange");
-      $(".board-nav").addClass("orange");
-      $(".news-text").addClass("orange");
-    });
-  </script>
+  $('#theme1' ).click(function (){
+$('#nav').addClass("red");
+$('.direct-heading').addClass("red");
+$('.board-nav').addClass("red");
+$('.news-text').addClass("red");
 
+});
+$('#theme2').click(function () {
+if ( $('#nav').hasClass("red");){
+)
+$('#nav').addClass("red");
+}
+if ($('.direct-heading').hasClass("red");){
+$('.direct-heading').addClass("red");}
+if($('.board-nav').hasClass("red");){ $('.board-nav').addClass("red"); }
+if ($('.news-text').hasClass("red");)
+{ $('.news-text').addClass("red");}
+});
+</script>
 
   <!--Scripts-->
 <script type="text/javascript">
