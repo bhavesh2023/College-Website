@@ -11,7 +11,15 @@ margin-right: 15px;}
 #theme2{
 width: 20px;
 height: 20px;
-background-color: red !important;}
+background-color: #c21717 !important;
+  margin-right: 15px;
+}
+
+#theme3{
+width: 20px;
+height: 20px;
+background-color: #F56320 !important;
+}
 
 
 .dropdown-item{
