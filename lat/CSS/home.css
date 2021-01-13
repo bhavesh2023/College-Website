@@ -11,26 +11,18 @@ margin-right: 15px;}
 #theme2{
 width: 20px;
 height: 20px;
-background-color: #c21717 !important;
+background-color: #f56320 !important;
   margin-right: 15px;
 }
 
-#theme3{
-width: 20px;
-height: 20px;
-background-color: #F56320 !important;
-}
 
-#theme3:hover, #theme1:hover, #theme2:hover{
+
+#theme1:hover, #theme2:hover{
 cursor: pointer;
 }
 
 .blue{
 background-color: #7c9eb2 !important;
-}
-
-.red{
-background-color: #c21717 !important;
 }
 
 .orange{
@@ -145,7 +137,7 @@ body{
 }
 
 #nav{
-  background-color: #7c9eb2 !important;
+  background-color: #7c9eb2;
 }
 
 nav{
@@ -217,6 +209,9 @@ a:hover{
 }
 .c{
   background-color: #7c9eb2 !important;
+}
+.z{
+  background-color: #F56320 !important;
 }
 #b1{
   border-radius: 10px 0 0 0;
@@ -570,6 +565,7 @@ img {vertical-align: middle;}
 }
 
 .direct-heading{
+  background-color: #7c9eb2;
   border-radius: 10px 10px 0 0;
   text-align: center;
   padding: 10px;
