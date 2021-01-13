@@ -13,7 +13,7 @@
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
   </script>
 
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -240,7 +240,7 @@
           <li><a class="but" id = 'b4' href="javascript:void(0)">Vacancies</a></li>
           <li><a class="but" id = 'b5' href="javascript:void(0)">Tender</a></li>
         </ul> -->
-      <div class="board-nav">
+      <div class="board-nav" >
         <a class="but" id='b1' href="javascript:void(0)">News</a>
         <a class="y but c" id='b2' href="javascript:void(0)">Events</a>
         <a class="y but c" id='b3' href="javascript:void(0)">Student Corner</a>
@@ -519,6 +519,10 @@
       $('.direct-heading').css({
         'background-color': '#F56320'
       });
+      if ($('.but').hasClass('c'))
+      {$('.but').removeClass('c');
+      $('.but').addClass('z');
+          }
     })
     $("#theme1").click(function(){
       $('#nav').css({
@@ -530,6 +534,10 @@
       $('.direct-heading').css({
         'background-color': '#7C9EB2'
       });
+      if ($('.but').hasClass('z'))
+      {$('.but').removeClass('z');
+      $('.but').addClass('c');
+          }
     })
     </script>
 
@@ -544,28 +552,28 @@ function googleTranslateElementInit() {
   <script>
     var slideIndex = 1;
     showSlides(slideIndex);
-    
+
     function plusSlides(n) {
       showSlides(slideIndex += n);
     }
-    
+
     function currentSlide(n) {
       showSlides(slideIndex = n);
     }
-    
+
     function showSlides(n) {
       var i;
       var slides = document.getElementsByClassName("mySlides");
       // var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
+      if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+          slides[i].style.display = "none";
       }
       // for (i = 0; i < dots.length; i++) {
       //     dots[i].className = dots[i].className.replace(" active", "");
       // }
-      slides[slideIndex-1].style.display = "block";  
+      slides[slideIndex-1].style.display = "block";
     }
     </script>
 
