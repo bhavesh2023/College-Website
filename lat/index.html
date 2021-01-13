@@ -56,7 +56,7 @@
   </div>
   <!--Header and Navigation Bar Start-->
 
-  <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
     <div id="n-links" class="container-fluid">
       <a class="navbar-brand" href="#"><img class="logo" src="Images/logo.png"><span class="heading">MNIT
           JAIPUR</span></a>
@@ -242,10 +242,10 @@
         </ul> -->
       <div class="board-nav">
         <a class="but" id='b1' href="javascript:void(0)">News</a>
-        <a class="but c" id='b2' href="javascript:void(0)">Events</a>
-        <a class="but c" id='b3' href="javascript:void(0)">Student Corner</a>
-        <a class="but c" id='b4' href="javascript:void(0)">Vacancy</a>
-        <a class="but c" id='b5' href="javascript:void(0)">Tender</a>
+        <a class="y but c" id='b2' href="javascript:void(0)">Events</a>
+        <a class="y but c" id='b3' href="javascript:void(0)">Student Corner</a>
+        <a class="y but c" id='b4' href="javascript:void(0)">Vacancy</a>
+        <a class="y but c" id='b5' href="javascript:void(0)">Tender</a>
       </div>
       <div id="board-box1" class="board-box">
         <p class="board-content">
@@ -395,7 +395,7 @@
   </div>
 
 <div class="director-corner row">
-      <p style="width: 100%; background-color: #7c9eb2;" class="direct-heading">Director's Corner</p>
+      <p style="width: 100%;" class="direct-heading">Director's Corner</p>
       <br>
       <div class="inside row">
         <img class="col-2 d-im" src="Images/Homepage/direc.jpg">
@@ -509,26 +509,29 @@
 
   <!--Footer End-->
   <script>
-  $('#theme1' ).click(function (){
-$('#nav').addClass("red");
-$('.direct-heading').addClass("red");
-$('.board-nav').addClass("red");
-$('.news-text').addClass("red");
-
-});
-$('#theme2').click(function () {
-if ( $('#nav').hasClass("red");){
-)
-$('#nav').addClass("red");
-}
-if ($('.direct-heading').hasClass("red");){
-$('.direct-heading').addClass("red");}
-if($('.board-nav').hasClass("red");){ $('.board-nav').addClass("red"); }
-if ($('.news-text').hasClass("red");)
-{ $('.news-text').addClass("red");}
-});
-    
-</script>
+    $("#theme2").click(function(){
+      $('#nav').css({
+        'background-color': '#F56320'
+      });
+      $('.news-text').css({
+        'background-color': '#F56320'
+      });
+      $('.direct-heading').css({
+        'background-color': '#F56320'
+      });
+    })
+    $("#theme1").click(function(){
+      $('#nav').css({
+        'background-color': '#7c9eb2'
+      });
+      $('.news-text').css({
+        'background-color': '#7C9EB2'
+      });
+      $('.direct-heading').css({
+        'background-color': '#7C9EB2'
+      });
+    })
+    </script>
 
   <!--Scripts-->
 <script type="text/javascript">
@@ -596,7 +599,7 @@ function googleTranslateElementInit() {
       }
     });
   </script>
-<script>
+<!-- <script>
 $('#theme1' ).click(function (){
 $('#nav').addClass("red");
 $('.direct-heading').addClass("red");
@@ -617,7 +620,7 @@ if ($('.news-text').hasClass("red");)
 { $('.news-text').addClass("red");}
 });
 
-</script>
+</script> -->
   <script>
     AOS.init();
   </script>
