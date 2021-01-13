@@ -720,31 +720,67 @@ if ($('.news-text').hasClass("red");)
   </script>
 
   <script>
+  var a=0;
     $(".but").click(function () {
       $(".board-box").addClass("box-hide");
-      $(".but").addClass("c");
-    });
+      if (a===0){
+      $(".but").addClass("c");}
+    else {
+      $(".but").addClass("z");
+    }    });
     $("#b1").click(function () {
       $("#board-box1").removeClass("box-hide");
-      $('#b1').removeClass("c");
+      if ($('#b1').hasClass("c")){
+
+        a=0;
+      $('#b1').removeClass("c");}
+
+      if ($('#b1').hasClass("z")){
+        a=1;
+      $('#b1').removeClass("z");}
     });
     $("#b2").click(function () {
       $("#board-box2").removeClass("box-hide");
-      $('#b2').removeClass("c");
+      if ($('#b2').hasClass("c")){
+        a=0;
+      $('#b2').removeClass("c");}
+
+      if ($('#b2').hasClass("z")){
+        a=1;
+      $('#b2').removeClass("z");}
     });
     $("#b3").click(function () {
       $("#board-box3").removeClass("box-hide");
-      $('#b3').removeClass("c");
+      if ($('#b3').hasClass("c")){
+        a=0;
+      $('#b3').removeClass("c");}
+
+      if ($('#b3').hasClass("z")){
+        a=1;
+      $('#b3').removeClass("z");}
     });
     $("#b4").click(function () {
       $("#board-box4").removeClass("box-hide");
-      $('#b4').removeClass("c");
+      if ($('#b4').hasClass("c")){
+        a=0;
+      $('#b4').removeClass("c");}
+
+      if ($('#b4').hasClass("z")){
+        a=1;
+      $('#b4').removeClass("z");}
     });
     $('#b5').click(function () {
       $("#board-box5").removeClass("box-hide");
-      $('#b5').removeClass("c");
+      if ($('#b5').hasClass("c")){
+        a=0;
+      $('#b5').removeClass("c");}
+
+      if ($('#b5').hasClass("z")){
+        a=1;
+      $('#b5').removeClass("z");}
     });
   </script>
+
 
   <script>
 
