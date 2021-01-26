@@ -40,10 +40,11 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: #4e5340;;
             background-color: aliceblue;
-            background-image: url(./img/landing.gif);
+            background-image: url(./img/nebula.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            transition: 5s;
         }
 
         nav {
@@ -103,7 +104,7 @@
             100% {
                 border-radius: 60% 0% 0% 0%;
                 background-image: url('./img/mnit_front.jpeg');
-                opacity: 1;
+               
             }
 
             
@@ -112,21 +113,24 @@
         }
 
         #image {
-            height: 100%;
-            width: 100%;
+            opacity: 0;
+            height: 0%;
+            width: 0%;
+            transition: 1s;
             border-radius: 60% 0% 0% 0%;
+            
             -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
             -webkit-mask-size: 100% 50%;
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-position: left top, left bottom;
-            background-image: url('./img/mnit_front.jpeg');
+            background-image: url('./img/computer.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             animation-name: image_animation;
             animation-delay: -0.2s;
             animation-iteration-count: 1;
-            animation-duration: 10s;
+            animation-duration: 2s;
             border-style: solid;
             border-width: 5px;
             border-color: aliceblue;
@@ -152,12 +156,46 @@
         #lower_link {
             border-radius: 100%;
         }
+
+        /* new buton */
+        
+.glow {
+    font-size: 80px;
+    width: 500px;
+    color: #fff;
+    opacity: 0.8;
+    transition: 1s;
+    background-color: black;
+    border-radius: 100px;
+    border-color: rgb(0, 0, 83);
+    border-width: 5px;
+    margin: auto;
+    top: 40%;
+    left: 15%;
+    z-index: 999999;
+    position: absolute;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3106f1, 0 0 40px  #3106f1, 0 0 50px  #3106f1, 0 0 60px  #3106f1, 0 0 70px #3106f1;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #4dafff, 0 0 40px #008bfd, 0 0 50px#4dafff, 0 0 60px #4dafff, 0 0 70px #4dafff, 0 0 80px #4dafff;
+    }
+}
     </style>
 
 
 </head>
 
-<body>
+<body id="bg">
     <!-- navigation bar-->
     <nav class="navbar navbar-expand-md navbar-light sticky-top">
 
@@ -200,6 +238,9 @@
     <div class="line"></div>
 
     <p align="center" style="font-style: italic; color: black">Vidya dadati binayang</p>
+    <button onclick="change_back()" class="glow" id="land">Land</button>
+
+    
 
     <div class="container-fluid" style="height: 60%;">
         <div class="row" style="height: 100%;">
@@ -308,6 +349,34 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script>
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+          }
+
+
+        function change_back(){
+           document.getElementById("bg").style.backgroundImage = "url(./img/landing.gif)";
+           document.getElementById("land").style.display = 'None';
+           setTimeout(function()
+           {
+               document.getElementById("bg").style.backgroundImage = "url(./img/mnit_front.jpeg)";
+               document.getElementById("image").style.opacity = '1';
+               document.getElementById("image").style.height = '100%';
+               document.getElementById("image").style.width = '100%';
+           }, 9000);
+
+           
+           
+          
+        }
+
+        
+
+        
     </script>
 
 
