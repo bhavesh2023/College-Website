@@ -8,8 +8,10 @@
 
     <link rel="shortcut icon" href="./img/HOPE_LOGO_Blue.png">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
     <!-- place for font awesome-->
@@ -38,8 +40,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: #4e5340;;
             background-color: aliceblue;
-            background-image: url(./img/nebula.jpg);
-            background-position: center;
+                        background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             transition: 5s;
@@ -109,11 +110,11 @@
 
 
         }
-/*
-        #image {
-            opacity: 0;
-            height: 0%;
-            width: 0%;
+
+        .image {
+
+            height: 400px;
+            width: auto;
             transition: 1s;
             border-radius: 60% 0% 0% 0%;
 
@@ -134,7 +135,7 @@
             border-color: aliceblue;
 
         }
-*/
+
         #bltn {
             height: 60%;
             border-radius: 20px;
@@ -153,6 +154,7 @@
 
         #lower_link {
             border-radius: 100%;
+
         }
 
         /* new buton */
@@ -193,7 +195,10 @@
 
 </head>
 
-<body id="bg">
+<body >
+  <div id = "bg">
+
+
     <!-- navigation bar-->
     <nav class="navbar navbar-expand-md navbar-light sticky-top">
 
@@ -239,57 +244,91 @@
     <button onclick="change_back()" class="glow" id="land">Land</button>
 
 
-
-    <div class="container-fluid" style="height: 60%;">
-        <div class="row" style="height: 100%;">
+<div style='border:2px solid black;padding-top:6%;padding-bottom:6%'>
+    <div class="container-fluid" style="height: 100%">
+        <div class="row" style="height: 100%">
             <div id="image" class="col-lg-8" style="height: 100%">
-
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div style="border:2px solid black "class="carousel-inner">
+    <div class="carousel-item active">
+      <div   class="image"  alt="First slide"></div>
+    </div>
+    <div class="carousel-item">
+      <div   class="image" alt="Second slide"></div>
+    </div>
+    <div class="carousel-item">
+      <div  class="image" alt="Third slide"></div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
             </div>
             <div class="col-lg-4" style="height: 100%">
-                <div class="row" style="height: 40%;">
-                    <center>
-                        <div id="message" class="cl-lg-10">
-                            <h2 style="color:black;">Malaviya National Institute of Technology</h2>
-                            <div class="line" style="background-color: #95a3a4;" data-aos="flip-left"></div>
-                            <p data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eligendi ipsa
-                                totam
-                                doloribus minus veritatis facere aliquid, laudantium velit, id debitis! Recusandae
-                                quaerat
-                                dignissimos neque corrupti ad omnis nisi iusto.
-                            </p>
-                        </div>
-                    </center>
+                <div class="row" style="height: 100%;">
+                  <center >
+                      <h2 style="color:rgb(54, 54, 54)">MALAVIYA NATIONAL INSTITUTE OF TECHNOLOGY</h2>
+                      <div class="line" data-aos="flip-left"></div>
+                      <div id="bltn" style="height: auto; width: 100%; background: rgba( 255, 255, 255, 0.25 );
+                      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+                      backdrop-filter: blur( 4px );
+                      -webkit-backdrop-filter: blur( 4px );
+                      border-radius: 10px;" data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure saepe eaque
+                          exercitationem voluptatibus labore, harum iusto, laboriosam dignissimos unde aliquid.
+                          Commodi consequuntur sed autem modi rem, nobis possimus aspernatur?
+                      </div>
+                  </center>
                 </div>
-                <div class="row" style="height: 100%;margin-bottom:40px;" align="center">
-                    <center >
-                        <h2 style="color:rgb(54, 54, 54)">BULLETINE</h2>
-                        <div class="line" data-aos="flip-left"></div>
-                        <div id="bltn" style="height: 50%; width: 100%; background: rgba( 255, 255, 255, 0.25 );
-                        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                        backdrop-filter: blur( 4px );
-                        -webkit-backdrop-filter: blur( 4px );
-                        border-radius: 10px;" data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure saepe eaque
-                            exercitationem voluptatibus labore, harum iusto, laboriosam dignissimos unde aliquid.
-                            Commodi consequuntur sed autem modi rem, nobis possimus aspernatur?
-                        </div>
-                    </center>
 
-                </div>
-            </div>
-        </div>
+                <div class="row" style="height: 100%;" align="center">
+              <center >
+                  <h2 style="color:rgb(54, 54, 54)">BULLETINE</h2>
+                  <div class="line" data-aos="flip-left"></div>
+                  <div id="bltn" style="height:auto; width: 100%; background: rgba( 255, 255, 255, 0.25 );
+                  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                  backdrop-filter: blur( 4px );
 
-    </div>
+                  -webkit-backdrop-filter: blur( 4px );
+                  border-radius: 10px;" data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure saepe eaque
+                      exercitationem voluptatibus labore, harum iusto, laboriosam dignissimos unde aliquid.
+                      Commodi consequuntur sed autem modi rem, nobis possimus aspernatur?
+                  </div>
+              </center>
+
+          </div>
+      </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+<br>
+
+<div style="margin-top:40px">
 
 
 
-
-
-    <br>
-
-    <h2 align="center" style="margin-top:160px;margin-bottom:160px;">Quick Links</h2>
+    <h2 >Quick Links</h2>
     <div class="line"></div>
+
+</div>
+
+
     <div class="container-fluid" style="height: 20%; width: 100">
         <br>
         <div id="lower" class="row" style="height: 60%">
@@ -343,7 +382,11 @@
         </div>
 
 
-    </div>
+    </div>/*
+
+
+
+
 
     <script>
         AOS.init();
