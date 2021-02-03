@@ -199,6 +199,11 @@
       text-shadow: 0 0 20px #fff, 0 0 30px #4dafff, 0 0 40px #008bfd, 0 0 50px#4dafff, 0 0 60px #4dafff, 0 0 70px #4dafff, 0 0 80px #4dafff;
     }
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
     </style>
 
 
@@ -236,8 +241,8 @@
                         </a>
                     </div>
                     <div class="box2">
-                        <a class="nav-item nav-link" href="./account_control.php">
-                            <p style="color: rgb(54, 54, 54);">Account Control<br></p>
+                        <a class="nav-item nav-link" onclick="dark()">
+                            <p style="color: rgb(54, 54, 54);">Dark Mode <br></p>
                         </a>
                     </div>
 
@@ -253,7 +258,7 @@
     <button onclick="change_back()" class="glow" id="land">Land</button>
 
 
-<div style='border:2px solid black;padding-top:6%;padding-bottom:6%'>
+<div style='padding-top:6%;padding-bottom:6%'>
     <div class="container-fluid" style="height: 100%">
         <div class="row" style="height: 100%">
             <div id="image" class="col-lg-8" style="height: 100%">
@@ -263,7 +268,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div style="border:2px solid black "class="carousel-inner">
+  <div class="carousel-inner">
     <div class="carousel-item active">
       <div   class="image"  alt="First slide"></div>
     </div>
@@ -291,9 +296,9 @@
                       <div class="line" data-aos="flip-left"></div>
                       <div id="bltn" style="height: auto; width: 100%; background: rgba( 255, 255, 255, 0.25 );
                       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-
                       backdrop-filter: blur( 4px );
                       -webkit-backdrop-filter: blur( 4px );
+                      padding:4px;
                       border-radius: 10px;" data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure saepe eaque
                           exercitationem voluptatibus labore, harum iusto, laboriosam dignissimos unde aliquid.
@@ -309,7 +314,7 @@
                   <div id="bltn" style="height:auto; width: 100%; background: rgba( 255, 255, 255, 0.25 );
                   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                   backdrop-filter: blur( 4px );
-
+                    padding:4px;
                   -webkit-backdrop-filter: blur( 4px );
                   border-radius: 10px;" data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure saepe eaque
@@ -328,7 +333,7 @@
 </div>
 <br>
 
-<div style="margin-top:40px">
+<div id = 'bd' style="margin-top:40px">
 
 
 
@@ -338,52 +343,55 @@
 </div>
 
 
-    <div class="container-fluid" style="height: 20%; width: 100">
+    <div id='bamm'  class="container-fluid" style="height: 20%; width: 100">
         <br>
         <div id="lower" class="row" style="height: 60%">
             <div class="col-lg-11" style="height: 100%; margin: auto">
                 <div class="row" style="height: 100%">
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100;">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100;">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100;">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100;">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
 
                     </div>
 
-                    <div id="lower_link" class="col-lg-1" style="height: 100;">
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
 
                     </div>
-                    <div id="lower_link"  class="col-lg-1" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
+                    <div id="lower_link"  class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
+
+                    </div>
+                    <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
 
                     </div>
                 </div>
@@ -391,8 +399,7 @@
         </div>
 
 
-    </div>/*
-
+    </div>
 
 
 
@@ -406,7 +413,6 @@
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
           }
-
 
         function change_back(){
            document.getElementById("bg").style.backgroundImage = "url(./img/landing.gif)";
@@ -432,6 +438,12 @@
 
 
         }
+        function dark(){
+          document.getElementById("bg").classList.toggle("dark-mode");
+          document.getElementById("bd").classList.toggle("dark-mode");
+          document.getElementById("bamm").classList.toggle("dark-mode");
+          document.getElementsByClassName('dp').classList.toggle("dark-mode");
+        }
 
 
 
@@ -443,3 +455,23 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
