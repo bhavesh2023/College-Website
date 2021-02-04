@@ -297,7 +297,7 @@ margin:0.4em auto;
   <div id="cov2">
 
 
-  <button id = 'end' class="butt2">Button</button>
+  <button onclick="endp()" class="butt2">Button</button>
   <button onclick="endp()" class="butt2">Very pretentious long button</button>
     </div>
   <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
@@ -825,9 +825,10 @@ if ($('.news-text').hasClass("red");)
 
 
   <script>
-  $("#end").click(function(){
-    ("#carouselExampleIndicators").removeClass("hide");
-  });
+    function end(){
+      var element = document.getElementById("carouselExampleIndicators");
+  element.classList.remove("hide");
+    }
 
   </script>
 
