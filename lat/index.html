@@ -837,14 +837,15 @@ if ($('.news-text').hasClass("red");)
 
       var element = document.getElementById("cov2");
       element.classList.add('hide');
+
+     document.getElementsByClassName("butt2")[0].disabled = true;
+     document.getElementsByClassName("butt2")[1].disabled = true;
         document.getElementById("cove").style.backgroundImage = "url(landing.gif)";
         setTimeout(function() {
 
             document.getElementById("cove").style.background = "none";
            document.getElementById("cov2").style.opacity = '1';
            document.getElementById("cov2").style.height= '0';
-          document.getElementsByClassName("butt2")[0].disabled = true;
-          document.getElementsByClassName("butt2")[1].disabled = true;
        }, 9000);
     }
 
