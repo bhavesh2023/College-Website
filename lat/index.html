@@ -150,6 +150,9 @@ display:block;
 margin:0.4em auto;
 }
 }
+#cov2{
+  text-align:center;
+}
   </style>
   <link rel="stylesheet" href="CSS/home.css" type="text/css" />
 </head>
@@ -294,8 +297,8 @@ margin:0.4em auto;
   <div id="cov2">
 
 
-  <a  class="butt2">Button</a>
-  <a  class="butt2">Very pretentious long button</a>
+  <a onclick="end()" class="butt2">Button</a>
+  <a onclick="endp()" class="butt2">Very pretentious long button</a>
     </div>
   <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -822,6 +825,9 @@ if ($('.news-text').hasClass("red");)
 
 
   <script>
+  function end(){
+    ("#carouselExampleIndicators").removeClass("hide");
+  }
 
   </script>
 
