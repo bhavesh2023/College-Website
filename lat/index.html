@@ -44,7 +44,7 @@
       width: auto;
       height: 2px;
     }
-    
+
     @keyframes glass {
       0% {
         background: rgba(255, 255, 255, 0.00);
@@ -115,6 +115,40 @@
       border-color: black;
       border-style: solid;
     }
+    .hide{
+      opacity: 0;
+    }
+    #cove{
+      background-color:red;
+    }
+    .button2{
+ display:inline-block;
+ padding:0.5em 3em;
+ border:0.16em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+ box-sizing: border-box;
+ text-decoration:none;
+ text-transform:uppercase;
+ font-family:'Roboto',sans-serif;
+ font-weight:400;
+ color:#FFFFFF;
+ text-align:center;
+ transition: all 0.15s;
+}
+.button2:hover{
+ color:#DDDDDD;
+ border-color:#DDDDDD;
+}
+.button2:active{
+ color:#BBBBBB;
+ border-color:#BBBBBB;
+}
+@media all and (max-width:30em){
+ .button2{
+  display:block;
+  margin:0.4em auto;
+ }
+}
   </style>
   <link rel="stylesheet" href="CSS/home.css" type="text/css" />
 </head>
@@ -255,8 +289,10 @@
 
   <!--Slider Start-->
 
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="cove" >
+  <a href="something" class="button2">Button</a>
+  <a href="something" class="button2">Very pretentious long button</a>
+  <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -305,7 +341,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+</div>
   <!--Slider End-->
 
 
@@ -699,7 +735,6 @@ $('#nav').addClass("red");
 $('.direct-heading').addClass("red");
 $('.board-nav').addClass("red");
 $('.news-text').addClass("red");
-
 });
 $('#theme2').click(function () {
 if ( $('#nav').hasClass("red");){
@@ -713,7 +748,6 @@ if($('.board-nav').hasClass("red");)
 if ($('.news-text').hasClass("red");)
 { $('.news-text').addClass("red");}
 });
-
 </script> -->
   <script>
     AOS.init();
