@@ -830,15 +830,18 @@ if ($('.news-text').hasClass("red");)
   element.classList.remove("hide");
       var element = document.getElementById("cov2");
       element.classList.add('hide');
+      document.getElementsById("cov2").style.height= '0';
+
     }
     function endp(){
 
       var element = document.getElementById("cov2");
       element.classList.add('hide');
-        document.getElementById("cove").style.backgroundImage = "url(./img/landing.gif)";
+        document.getElementById("cove").style.backgroundImage = "url(./new_page/img/landing.gif)";
         setTimeout(function() {
 
            document.getElementsById("cov2").style.opacity = '1';
+           document.getElementsById("cov2").style.height= '0';
 
 
        }, 9000);
