@@ -842,7 +842,8 @@ if ($('.news-text').hasClass("red");)
      document.getElementsByClassName("butt2")[1].disabled = true;
         document.getElementById("cove").style.backgroundImage = "url(landing.gif)";
         setTimeout(function() {
-
+          var element = document.getElementById("carouselExampleIndicators");
+      element.classList.remove("hide");
             document.getElementById("cove").style.background = "none";
            document.getElementById("cov2").style.opacity = '1';
            document.getElementById("cov2").style.height= '0';
