@@ -9,10 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/cb2ceaa717.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-  </script>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+</script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -121,33 +122,33 @@
     #cove{
       background-color:red;
     }
-    .button2{
- display:inline-block;
- padding:0.5em 3em;
- border:0.16em solid #FFFFFF;
- margin:0 0.3em 0.3em 0;
- box-sizing: border-box;
- text-decoration:none;
- text-transform:uppercase;
- font-family:'Roboto',sans-serif;
- font-weight:400;
- color:#FFFFFF;
- text-align:center;
- transition: all 0.15s;
+    a.butt2{
+display:inline-block;
+padding:0.5em 3em;
+border:0.16em solid #FFFFFF;
+margin:0 0.3em 0.3em 0;
+box-sizing: border-box;
+text-decoration:none;
+text-transform:uppercase;
+font-family:'Roboto',sans-serif;
+font-weight:400;
+color:#FFFFFF;
+text-align:center;
+transition: all 0.15s;
 }
-.button2:hover{
- color:#DDDDDD;
- border-color:#DDDDDD;
+a.butt2:hover{
+color:#DDDDDD;
+border-color:#DDDDDD;
 }
-.button2:active{
- color:#BBBBBB;
- border-color:#BBBBBB;
+a.butt2:active{
+color:#BBBBBB;
+border-color:#BBBBBB;
 }
 @media all and (max-width:30em){
- .button2{
-  display:block;
-  margin:0.4em auto;
- }
+a.butt2{
+display:block;
+margin:0.4em auto;
+}
 }
   </style>
   <link rel="stylesheet" href="CSS/home.css" type="text/css" />
@@ -290,8 +291,12 @@
   <!--Slider Start-->
 
 <div id="cove" >
-  <a href="something" class="button2">Button</a>
-  <a href="something" class="button2">Very pretentious long button</a>
+  <div id="cov2">
+
+
+  <a  class="butt2">Button</a>
+  <a  class="butt2">Very pretentious long button</a>
+    </div>
   <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
