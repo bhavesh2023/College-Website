@@ -157,16 +157,26 @@ border-color:#BBBBBB;
 .butt2{
 display:block;
 margin:0.4em auto;
+padding:20px;
 }
 }
 #cov2{
   text-align:center;
 }
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
   </style>
   <link rel="stylesheet" href="CSS/home.css" type="text/css" />
 </head>
 
-<body onload="disableScroll()" >
+<body onload="disableScroll()" class="example">
 
   <div class="top-bar"><div id="google_translate_element"></div>
     <div id="theme1"></div>
