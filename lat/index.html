@@ -297,7 +297,7 @@ margin:0.4em auto;
   <div id="cov2">
 
 
-  <button onclick="endp()" class="butt2">Button</button>
+  <button onclick="end()" class="butt2">Button</button>
   <button onclick="endp()" class="butt2">Very pretentious long button</button>
     </div>
   <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
@@ -828,6 +828,20 @@ if ($('.news-text').hasClass("red");)
     function end(){
       var element = document.getElementById("carouselExampleIndicators");
   element.classList.remove("hide");
+      var element = document.getElementById("cov2");
+      element.classList.add('hide');
+    }
+    function endp(){
+
+      var element = document.getElementById("cov2");
+      element.classList.add('hide');
+        document.getElementById("cove").style.backgroundImage = "url(./img/landing.gif)";
+        setTimeout(function() {
+
+           document.getElementsById("cov2").style.opacity = '1';
+
+
+       }, 9000);
     }
 
   </script>
