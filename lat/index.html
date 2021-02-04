@@ -830,8 +830,10 @@ if ($('.news-text').hasClass("red");)
   element.classList.remove("hide");
       var element = document.getElementById("cov2");
       element.classList.add('hide');
-      document.getElementsById("cov2").style.height= '0';
+      document.getElementById("cov2").style.height= '0';
 
+           document.getElementsByClassName("butt2")[0].disabled = true;
+           document.getElementsByClassName("butt2")[1].disabled = true;
     }
     function endp(){
 
