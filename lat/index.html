@@ -119,15 +119,6 @@
     .hide{
       opacity: 0;
     }
-    .nile{
-      background-image:   url(landing.gif);
-      background-repeat: no-repeat;
-      background-size:cover;
-      background-position: center;
-      background-attachment: fixed;
-
-
-    }
     #cove{
       background-color:red;
     }
@@ -157,26 +148,16 @@ border-color:#BBBBBB;
 .butt2{
 display:block;
 margin:0.4em auto;
-padding:20px;
 }
 }
 #cov2{
   text-align:center;
 }
-.example::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
   </style>
   <link rel="stylesheet" href="CSS/home.css" type="text/css" />
 </head>
 
-<body onload="disableScroll()" class="example">
+<body>
 
   <div class="top-bar"><div id="google_translate_element"></div>
     <div id="theme1"></div>
@@ -312,14 +293,9 @@ padding:20px;
 
   <!--Slider Start-->
 
-<div id="cove"  >
-  <div id="cov2">
-
-
-  <a onclick="end()" class="butt2">Button</a>
-  <a onclick="endp()" class="butt2">Very pretentious long button</a>
-    </div>
-  <div id="carouselExampleIndicators" class="carousel slide hide" data-ride="carousel">
+<div >
+ 
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -844,73 +820,6 @@ if ($('.news-text').hasClass("red");)
 
 
   <script>
-    function end(){
-      enableScroll();
-      var element = document.getElementById("carouselExampleIndicators");
-  element.classList.remove("hide");
-      var element = document.getElementById("cov2");
-      element.classList.add('hide');
-      document.getElementById("cov2").style.height= '0';
-
-           document.getElementsByClassName("butt2")[0].disabled = true;
-           document.getElementsByClassName("butt2")[1].disabled = true;
-    }
-    function endp(){
-      enableScroll();
-      var element = document.getElementById("cov2");
-      element.classList.add('hide');
-
-     document.getElementsByClassName("butt2")[0].disabled = true;
-     document.getElementsByClassName("butt2")[1].disabled = true;
-        document.getElementById("cove").classList.add("nile");
-
-        setTimeout(function() {
-          var element = document.getElementById("carouselExampleIndicators");
-      element.classList.remove("hide");
-            document.getElementById("cove").style.background = "none";
-           document.getElementById("cov2").style.opacity = '1';
-           document.getElementById("cov2").style.height= '0';
-       }, 9000);
-    }
-    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-function preventDefault(e) {
-  e.preventDefault();
-}
-
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
-
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; }
-  }));
-} catch(e) {}
-
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-// call this to Disable
-function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-}
-
-// call this to Enable
-function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-  window.removeEventListener('touchmove', preventDefault, wheelOpt);
-  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-}
 
   </script>
 
