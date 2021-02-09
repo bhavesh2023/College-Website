@@ -15,6 +15,7 @@
     <!-- place for font awesome
     <script src="https://kit.fontawesome.com/8fedbb90c1.js" crossorigin="anonymous"></script>
     -->
+    
 
     <!--DATA AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -39,6 +40,10 @@
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color: #4e5340;
         background-color: aliceblue;
+        background-image: url('./img/transp_mnit.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         transition: 5s;
       }
@@ -108,12 +113,16 @@
 
       }
 
+      #carousel-inner {
+        opacity: 0;
+        transition: 2s;
+      }
+
       .image {
 
-       
-        
         height: 400px;
         width: auto;
+        opacity: 1;
 
         transition: 1s;
         border-radius: 60% 0% 0% 0%;
@@ -252,6 +261,11 @@
           0 22.3px 17.9px rgba(0, 0, 0, 0.072),
           0 41.8px 33.4px rgba(0, 0, 0, 0.086),
           0 100px 80px rgba(0, 0, 0, 0.12);
+          background-image: url('./img/transp_mnit.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
       }
 
       .inside {
@@ -874,10 +888,65 @@
       }
     </style>
 
+    <style>
+      /* 3d animation */
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+
+
+
+      .box_3d {
+        position: relative;
+        width: 300px;
+        height: 150px;
+        transform-style: preserve-3d;
+        animation: animate 30s linear;
+        animation-iteration-count: infinite;
+      }
+
+      .box_3d:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: perspective(1000px) rotateY(0deg);
+        }
+
+        100% {
+          transform: perspective(1000px) rotateY(360deg);
+        }
+      }
+
+      .box_3d>span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+        -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0000001a);
+      }
+
+      .box_3d>span>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    </style>
+
 
   </head>
 
-  <body>
+  <body id="body">
     <div id="bg" style="transition: 2s;">
 
 
@@ -908,9 +977,18 @@
                   <p style="color: rgb(54, 54, 54);">Account Control<br></p>
                 </a>
               </div>
+
+              <div class="box2">
+                <a class="nav-item nav-link" onclick="direct()">
+                  <button style="color: rgb(138, 138, 138); background-color:black; border-radius:20%">Land directly
+                    <br></button>
+                </a>
+              </div>
+
               <div class="box2">
                 <a class="nav-item nav-link" onclick="dark()">
-                  <button style="color: rgb(138, 138, 138); background-color:black; border-radius:20%">Dark Mode <br></button>
+                  <button style="color: rgb(138, 138, 138); background-color:black; border-radius:20%">Dark Mode
+                    <br></button>
                 </a>
               </div>
 
@@ -931,17 +1009,17 @@
         <div class="container-fluid" style="height: 100%">
           <div class="row" style="height: 100%">
 
-            <div id="image" class="col-lg-8" style="height: 100%" style="display: none;">
-              <div class="box" >
+            <div id="img" class="col-lg-8" style="height: 100%" style="display: none;">
+              <div class="box">
               </div>
-              <button onclick="change_back()" class="glow" id="land">Land</button>
+              <button onclick="change_back()" class="glow" id="land" style="transition: 2s;">Land</button>
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div class="carousel-inner">
+                <div class="carousel-inner" id="carousel-inner">
                   <div class="carousel-item active">
                     <div class="image" alt="First slide"></div>
                   </div>
@@ -1006,34 +1084,39 @@
     </div>
     <br>
 
-    <div id="sec2" class="section2">
-    <div id='bd' style="margin-top:40px; transition: 2s;">
-      <h2 align="center">Quick Links</h2>
-      <div class="line"></div>
+    <div id="sec2" class="section2" style="background-image: url('./img/transp_mnit.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+">
+      <div id='bd' style="margin-top:40px; transition: 2s;">
+        <h2 align="center">Quick Links</h2>
+        <div class="line"></div>
 
-    </div>
-     
+      </div>
 
 
-    <div id='bamm' class="container-fluid" style="height: 20%; width: 100; background-color: aliceblue; transition: 2s;">
-      <br>
-      <div id="lower" class="row" style="height: 60%; justify-content: center; background-color: rgb(192, 221, 255);"
-        align='center'>
-        <div class="flex-container" align=center>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
+
+      <div id='bamm' class="container-fluid"
+        style="height: 20%; width: 100; background-color: aliceblue; transition: 2s;">
+        <br>
+        <div id="lower" class="row" style="height: 60%; justify-content: center; background-color: rgb(192, 221, 255);"
+          align='center'>
+          <div class="flex-container" align=center>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    
-    
-    
+
+
+
       <div id="news" class="news row" data-aos="fade-up">
         <div class="news-text col-sm-2">NEWS</div>
         <div class="news-items col-sm-10">
@@ -1160,7 +1243,8 @@
           <div data-aos="fade-up">
             <div class="line" data-aos="flip-left" data-aos-duration="3000"></div>
           </div>
-
+          <br><br>
+          <!--
           <div class="pp pp-desktop row" align='center'>
             <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg" data-aos="fade-up">
             <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg" data-aos="fade-up">
@@ -1192,28 +1276,38 @@
           -webkit-backdrop-filter: blur( 4px );
           border-radius: 10px;">&#10095;</a>
 
-            <!-- <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"> -->
+          --->
 
-
+          <!-- corner for 3d animation -->
+          <div class="box_3d" style="margin: auto;">
+            <span style="--i:1"> <img src="./gallery/01.jpg"> </span>
+            <span style="--i:2"> <img src="./gallery/02.jpg"> </span>
+            <span style="--i:3"> <img src="./gallery/03.jpeg"> </span>
+            <span style="--i:4"> <img src="./gallery/04.jpg"> </span>
+            <span style="--i:5"> <img src="./gallery/05.jpg"> </span>
+            <span style="--i:6"> <img src="./gallery/06.jpg"> </span>
+            <span style="--i:7"> <img src="./gallery/07.jpeg"> </span>
+            <span style="--i:8"> <img src="./gallery/08.jpg"> </span>
+            <span style="--i:9"> <img src="./gallery/09.jpg"> </span>
           </div>
 
+          <br><br>
+
+
+
         </div>
+
       </div>
+    </div>
     </div>
 
     <div class="director-corner row">
       <p style="width: 100%;" class="direct-heading">Director's Corner</p>
       <br>
       <div class="inside row">
-        <!--
-        <img class="col-2 d-im" src="Images/Homepage/direc.jpg">
-        -->
+
+        <img class="col-2 d-im" src="img/nebula.jpg">
+
         <div class="col-9 direct-cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur
           consequat dignissim. Maecenas tristique fermentum lorem sit amet molestie. Donec nec gravida sapien. Curabitur
           facilisis placerat magna, consectetur feugiat neque consectetur quis. Donec at neque id massa placerat
@@ -1549,11 +1643,25 @@ if ($('.news-text').hasClass("red");)
         return new Promise(resolve => setTimeout(resolve, ms));
       }
 
+      function direct() {
+        document.getElementById("bg").style.backgroundImage = "url(./img/mnit_front.jpeg)";
+        document.getElementById("bg").style.backgroundRepeat = "no-repeat";
+        document.getElementById("bg").style.backgroundSize = "cover";
+        document.getElementById("bg").style.backgroundPosition = "center";
+        document.getElementById("bg").style.backgroundAttachment = "fixed";
+
+        //document.getElementsByClassName("image").style.display = 'visible';
+        document.getElementById("carousel-inner").style.opacity = '1';
+        document.getElementById("land").style.display = 'None';
+
+      }
+
       function change_back() {
         document.getElementById("bg").style.backgroundImage = "url(./img/landing.gif)";
+        document.getElementById("land").style.opacity = '0';
         document.getElementById("land").style.display = 'None';
-       // document.getElementByClass("image").style.opacity = '0';
-        document.getElementById("image").style.opacity='0'; 
+        // document.getElementByClass("image").style.opacity = '0';
+        document.getElementById("img").style.opacity = '1';
 
         setTimeout(function () {
           document.getElementById("bg").style.backgroundImage = "url(./img/mnit_front.jpeg)";
@@ -1563,15 +1671,15 @@ if ($('.news-text').hasClass("red");)
           document.getElementById("bg").style.backgroundAttachment = "fixed";
 
           //document.getElementsByClassName("image").style.display = 'visible';
-              document.getElementById("image").style.opacity='1'; 
-          console.log(document.getElementsByClassName("image"));
+          document.getElementById("carousel-inner").style.opacity = '1';
+
 
           var i = 0;
           for (i = 0; i < 3; i++) {
-            
+
 
           }
-          
+
         }, 9000);
 
 
@@ -1584,6 +1692,7 @@ if ($('.news-text').hasClass("red");)
         document.getElementById("bd").classList.toggle("dark-mode");
         document.getElementById("bamm").classList.toggle("dark-mode");
         document.getElementsByClassName('dp').classList.toggle("dark-mode");
+        document.getElementById("body").classList.toggle("dark-mode");
       }
     </script>
 
