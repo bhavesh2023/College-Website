@@ -6,20 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
 
-    <link rel="shortcut icon" href="./img/HOPE_LOGO_Blue.png">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-    <!-- place for font awesome-->
+    <!-- place for font awesome
     <script src="https://kit.fontawesome.com/8fedbb90c1.js" crossorigin="anonymous"></script>
-
-    <!-- linking the css file-->
-    <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="./css/file.css">
-    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="./css/file_small.css">
+    -->
 
     <!--DATA AOS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -28,7 +23,9 @@
 
     <style>
       a:hover {
-        text-decoration: none;}
+        text-decoration: none;
+      }
+
       * {
         padding: 0;
         margin: 0;
@@ -113,7 +110,8 @@
 
       .image {
 
-        opacity: 0;
+        opacity: 1;
+        display: none;
         height: 400px;
         width: auto;
 
@@ -146,11 +144,12 @@
 
       #lower {
         border-radius: 20px;
-        background-color: #95A3A4;
-        background: rgba(255, 255, 255, 0.25);
+        background: rgb(192, 221, 255);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
 
       }
 
@@ -174,8 +173,10 @@
       /* new buton */
 
       .glow {
-        font-size: 12vw;
-        width: 48vw;
+        font-size: 5vw;
+        width: 20vw;
+        height: 10vw;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color: #fff;
         opacity: 0.8;
         transition: 1s;
@@ -185,13 +186,41 @@
         border-width: 5px;
         margin: auto;
         top: 40%;
-        left: 15%;
+        left: 24%;
         z-index: 999999;
         position: absolute;
         text-align: center;
         -webkit-animation: glow 1s ease-in-out infinite alternate;
         -moz-animation: glow 1s ease-in-out infinite alternate;
         animation: glow 1s ease-in-out infinite alternate;
+
+      }
+
+      @media screen and (max-width: 810px) {
+
+        .glow {
+          font-size: 10vw;
+          width: 50%;
+          height: 20vw;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: #fff;
+          opacity: 0.8;
+          transition: 1s;
+          background-color: black;
+          border-radius: 100px;
+          border-color: rgb(0, 0, 83);
+          border-width: 5px;
+          margin: auto;
+          top: 40%;
+          left: 25%;
+          z-index: 999999;
+          position: absolute;
+          text-align: center;
+          -webkit-animation: glow 1s ease-in-out infinite alternate;
+          -moz-animation: glow 1s ease-in-out infinite alternate;
+          animation: glow 1s ease-in-out infinite alternate;
+
+        }
 
       }
 
@@ -209,563 +238,657 @@
         background-color: black;
         color: white;
       }
-      .director-corner{
-  margin-top: 70px;
-  border-radius: 10px;
-  width: 90%;
-  margin-right: 5%;
-  margin-left: 5%;
-  box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
-;
-}
-.inside{
-  padding-top: 20px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 50px;
-}
 
-.direct-heading{
-  border-radius: 10px 10px 0 0;
-  text-align: center;
-  padding: 10px;
-  font-size: 24px;
-  font-weight: 600;
-}
-.d-im{
-  min-width: 150px;
-  max-height: 150px;
-}
-.direct-cont{
-  margin-left: 10px;
-  color: black !important;
-}
-@media screen and (max-width: 810px){
-  .d-im, .direct-cont{
-    margin-left: auto;
-    margin-right: auto;
-  }
+      .director-corner {
+        margin-top: 70px;
+        border-radius: 10px;
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        box-shadow:
+          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+          0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+          0 100px 80px rgba(0, 0, 0, 0.12);
+      }
 
-  .direct-cont{
-    margin-top: 25px;
-  }
-}
+      .inside {
+        padding-top: 20px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 50px;
+      }
 
-.top-bar{
-  padding-top: 9px;
-  width: 100%;
-  background-color: #52528c;
-  height: 40px;
-  display: flex;
-}
+      .direct-heading {
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+        padding: 10px;
+        font-size: 24px;
+        font-weight: 600;
+      }
 
-ul{
-  list-style-type: none;
-}
+      .d-im {
+        min-width: 150px;
+        max-height: 150px;
+      }
 
-body{
-  overflow-x: hidden;
-}
+      .direct-cont {
+        margin-left: 10px;
+        color: black !important;
+      }
 
-.logo{
-  width: 65px;
-  height: 65px;
-}
+      @media screen and (max-width: 810px) {
 
-.heading{
-  margin-left: 10px;
-}
+        .d-im,
+        .direct-cont {
+          margin-left: auto;
+          margin-right: auto;
+        }
 
-.nav-item{
- margin-right: 10px;
- /* margin-top: 5px; */
-}
+        .direct-cont {
+          margin-top: 25px;
+        }
+      }
 
-.nav-link{
-  font-size: 18px;
-  font-weight: 600;
-}
+      .top-bar {
+        padding-top: 9px;
+        width: 100%;
+        background-color: #52528c;
+        height: 40px;
+        display: flex;
+      }
 
-.nav-link:hover{
-  background-color: #52528c;
-}
+      ul {
+        list-style-type: none;
+      }
 
-#nav{
-  background-color: #7c9eb2;
-}
+      body {
+        overflow-x: hidden;
+      }
 
-nav{
-  position: sticky !important;
-  top: 0;
-  z-index: 1;
-  padding-left: 5% !important;
-  padding-right: 5% !important;
-}
+      .logo {
+        width: 65px;
+        height: 65px;
+      }
 
-.carousel-control-prev, .carousel-control-next{
-  background-color: grey;
-}
+      .heading {
+        margin-left: 10px;
+      }
 
-.d-block{
-  height: calc(100vh - 131px);
-}
+      .nav-item {
+        margin-right: 10px;
+        /* margin-top: 5px; */
+      }
 
+      .nav-link {
+        font-size: 18px;
+        font-weight: 600;
+      }
 
-a:hover{
-  text-decoration: none;
-}
+      .nav-link:hover {
+        background-color: #52528c;
+      }
 
+      #nav {
+        background-color: #7c9eb2;
+      }
 
-.news {
+      nav {
+        position: sticky !important;
+        top: 0;
+        z-index: 1;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+      }
 
-  margin-top: 50px;
-  background-color: grey;
-  width: 80%;
-  margin-left: 10% !important;
-  border-radius: 10px;
-}
-.news-items{
-  padding: 10px;
-  font-size: 20px;
-  vertical-align: middle;
-  width: 90%;
-}
+      .carousel-control-prev,
+      .carousel-control-next {
+        background-color: grey;
+      }
 
-.news-text {
-  font-weight: 600;
-  font-size: 16px;
-  padding: 10px;
-  padding-top: 14px;
-  text-align:center;
-  background-color: #7c9eb2;
-}
-
-.news-text, .news-items {
-  display: inline-block;
-}
-
-.notice-board{
-  margin-top: 50px;
-}
-.board-nav{
-  display: flex;
-  width: 100%;
-  list-style-type: none;
-}
-.board-nav a {
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  background-color: #52528c;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  width: 20%;
-}
-.c{
-  background-color: #7c9eb2 !important;
-}
-.z{
-  background-color: #F56320 !important;
-}
-#b1{
-  border-radius: 10px 0 0 0;
-}
-#b5{
-  border-radius: 0 10px 0 0;
-  margin-right: 0;
-}
-.board-nav a:hover {
-  background-color: #52528c !important;
-}
-
-.board-box{
-  width: 80%;
-  margin-left: 10%;
-  padding-top: 25px;
-  padding-bottom: 5px;
-}
-.notice-board {
-  width: 80%;
-  margin-left: 10%;
-  border-radius: 10px;
-  padding: 0;
-  box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
-;
-}
-
-.box-hide{
-  display: none;
-}
-
-.board-content{
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.board-content marquee a{
-  color: black !important;
-  text-decoration: none;
-}
-
-hr {
-  border-top: 1px solid #000 !important;
-}
-
-.footer{
-  margin-top: 100px;
-  background-color: #000;
-  width: 100%;
-  padding: 50px 0 30px 0 !important;
-}
-
-.part1, .part2{
-  width: 90%;
-  margin-right: 5% !important ;
-  margin-left: 5% !important;
-}
-.part2{
-  color: grey !important;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.part1{
-  padding-bottom: 30px;
-  border-bottom: 2px solid #52528c;
-}
-
-.footer-wid-heading{
-  border-top: 2px solid #52528c;
-  border-bottom: 2px solid #52528c;
-  border-right: 2px solid #52528c;
-  font-size: 25px;
-  font-weight: 600;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
-.foot-links{
-  padding-left: 0;
-  border-right: 2px solid #52528c;
-}
-
-.foot-links li{
-  padding: 10px 10px 10px 5px;
-}
+      .d-block {
+        height: calc(100vh - 131px);
+      }
 
 
-
-.social .foot-items{
-  margin-right: 15%;
-}
-
-.add{
-  font-size: 14px;
-  margin-left: 12px;
-}
-
-.coll{
-  margin-bottom: 0;
-}
-
-.fa-map-marked-alt{
-  padding-top: 10px;
-}
-
-.location{
-  display: flex;
-}
-
-.mobile{
-  display: none;
-}
-
-.clicked{
-  background-color: #52528c !important;
-}
-
-.board-content a:before{
-  content: "\00BB";
-  margin-right: 5px;
-}
-
-.campus{
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 50px;
-  background-color:#000;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.sec3 {
-  margin-top: 50px;
-  background-color:#000;
-  width: 100%;
-}
-
-.campus-head{
-  text-align: center;
-  color: white !important;
-  font-weight: 600;
-  font-size: 30px;
-}
-
-.p-img{
-  padding-left: 0;
-  margin-bottom: 10px;
-}
-
-.pp{
-  padding-top: 30px;
-}
-
-.pp-mobile{
-  display: none !important;
-}
-
-@media screen and (max-width: 767px){
-  .pp-desktop{
-    display: none !important;
-  }
-  .pp-mobile{
-    display: block !important;
-  }
-  .mySlides {display: none;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  background-color: #000;
-}
+      a:hover {
+        text-decoration: none;
+      }
 
 
-/* Position the "next button" to the right */
-.next {
-  right: 15px;
-  border-radius: 3px 0 0 3px;
-}
+      .news {
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+        margin-top: 50px;
+        background-color: grey;
+        width: 80%;
+        margin-left: 10% !important;
+        border-radius: 10px;
+      }
+
+      .news-items {
+        padding: 10px;
+        font-size: 20px;
+        vertical-align: middle;
+        width: 90%;
+      }
+
+      .news-text {
+        font-weight: 600;
+        font-size: 16px;
+        padding: 10px;
+        padding-top: 14px;
+        text-align: center;
+        background-color: #7c9eb2;
+      }
+
+      .news-text,
+      .news-items {
+        display: inline-block;
+      }
+
+      .notice-board {
+        margin-top: 50px;
+      }
+
+      .board-nav {
+        display: flex;
+        width: 100%;
+        list-style-type: none;
+      }
+
+      .board-nav a {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        background-color: #52528c;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 20%;
+      }
+
+      .c {
+        background-color: #7c9eb2 !important;
+      }
+
+      .z {
+        background-color: #F56320 !important;
+      }
+
+      #b1 {
+        border-radius: 10px 0 0 0;
+      }
+
+      #b5 {
+        border-radius: 0 10px 0 0;
+        margin-right: 0;
+      }
+
+      .board-nav a:hover {
+        background-color: #52528c !important;
+      }
+
+      .board-box {
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 25px;
+        padding-bottom: 5px;
+      }
+
+      .notice-board {
+        width: 80%;
+        margin-left: 10%;
+        border-radius: 10px;
+        padding: 0;
+        box-shadow:
+          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+          0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+          0 100px 80px rgba(0, 0, 0, 0.12);
+      }
+
+      .box-hide {
+        display: none;
+      }
+
+      .board-content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .board-content marquee a {
+        color: black !important;
+        text-decoration: none;
+      }
+
+      hr {
+        border-top: 1px solid #000 !important;
+      }
+
+      .footer {
+        margin-top: 100px;
+        background-color: #000;
+        width: 100%;
+        padding: 50px 0 30px 0 !important;
+      }
+
+      .part1,
+      .part2 {
+        width: 90%;
+        margin-right: 5% !important;
+        margin-left: 5% !important;
+      }
+
+      .part2 {
+        color: grey !important;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .part1 {
+        padding-bottom: 30px;
+        border-bottom: 2px solid #52528c;
+      }
+
+      .footer-wid-heading {
+        border-top: 2px solid #52528c;
+        border-bottom: 2px solid #52528c;
+        border-right: 2px solid #52528c;
+        font-size: 25px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+
+      .foot-links {
+        padding-left: 0;
+        border-right: 2px solid #52528c;
+      }
+
+      .foot-links li {
+        padding: 10px 10px 10px 5px;
+      }
 
 
-}
 
-@media screen and (max-width: 800px){
-  .news, .notice-board{
-    width: 90%;
-    margin-left: 5% !important;
-    margin-right: 5% !important;
-  }
-  .board-box{
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-  }
-}
+      .social .foot-items {
+        margin-right: 15%;
+      }
 
-@media screen and (max-width: 580px){
-  .news, .notice-board{
-    width: 98%;
-    margin-left: 1% !important;
-    margin-right: 1% !important;
-  }
-  .news-items{
-    width: 100%;
-  }
-}
+      .add {
+        font-size: 14px;
+        margin-left: 12px;
+      }
 
-.fa-sign-in{
-  display: none;
-}
+      .coll {
+        margin-bottom: 0;
+      }
 
-@media screen and (min-width: 992px){
-  .social{
-    padding-bottom: 25px !important;
-  }
-  .navbar-nav{
-    position: absolute;
-    right: 5%;
-  }
-  /* #n-links{
+      .fa-map-marked-alt {
+        padding-top: 10px;
+      }
+
+      .location {
+        display: flex;
+      }
+
+      .mobile {
+        display: none;
+      }
+
+      .clicked {
+        background-color: #52528c !important;
+      }
+
+      .board-content a:before {
+        content: "\00BB";
+        margin-right: 5px;
+      }
+
+      .campus {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 50px;
+        background-color: #000;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      .sec3 {
+        margin-top: 50px;
+        background-color: #000;
+        width: 100%;
+      }
+
+      .campus-head {
+        text-align: center;
+        color: white !important;
+        font-weight: 600;
+        font-size: 30px;
+      }
+
+      .p-img {
+        padding-left: 0;
+        margin-bottom: 10px;
+      }
+
+      .pp {
+        padding-top: 30px;
+      }
+
+      .pp-mobile {
+        display: none !important;
+      }
+
+      @media screen and (max-width: 767px) {
+        .pp-desktop {
+          display: none !important;
+        }
+
+        .pp-mobile {
+          display: block !important;
+        }
+
+        .mySlides {
+          display: none;
+        }
+
+        img {
+          vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          background-color: #000;
+        }
+
+        /* the corousel */
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 15px;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+      }
+
+      @media screen and (max-width: 800px) {
+
+        .news,
+        .notice-board {
+          width: 90%;
+          margin-left: 5% !important;
+          margin-right: 5% !important;
+        }
+
+        .board-box {
+          width: 95%;
+          margin-left: 2.5%;
+          margin-right: 2.5%;
+        }
+      }
+
+      @media screen and (max-width: 580px) {
+
+        .news,
+        .notice-board {
+          width: 98%;
+          margin-left: 1% !important;
+          margin-right: 1% !important;
+        }
+
+        .news-items {
+          width: 100%;
+        }
+      }
+
+      .fa-sign-in {
+        display: none;
+      }
+
+      @media screen and (min-width: 992px) {
+        .social {
+          padding-bottom: 25px !important;
+        }
+
+        .navbar-nav {
+          position: absolute;
+          right: 5%;
+        }
+
+        /* #n-links{
     display: block;
   } */
-}
+      }
 
-@media screen and (max-width: 400px){
-  .heading{
-    display: none;
-  }
-  #n-links{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
+      @media screen and (max-width: 400px) {
+        .heading {
+          display: none;
+        }
 
-@media screen and (max-width: 500px){
-  .d-block{
-    height: 400px;
-  }
+        #n-links {
+          width: 90%;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+      }
 
-  .but{
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
+      @media screen and (max-width: 500px) {
+        .d-block {
+          height: 400px;
+        }
 
-@media screen and (max-width: 992px){
-  .footer-wid-heading:hover{
-    cursor: pointer;
-  }
+        .but {
+          padding-left: 2%;
+          padding-right: 2%;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .footer-wid-heading:hover {
+          cursor: pointer;
+        }
 
 
-  .navbar-nav{
-    margin-bottom: 0 !important;
-    padding-top: 10px !important;
-  }
-  .desktop{
-    display: none;
-  }
+        .navbar-nav {
+          margin-bottom: 0 !important;
+          padding-top: 10px !important;
+        }
 
-  .dis{
-    display: block !important;
-  }
+        .desktop {
+          display: none;
+        }
 
-  .add{
-    padding-top: 10px;
-  }
+        .dis {
+          display: block !important;
+        }
 
-  .coll{
-    display: block !important;
-  }
+        .add {
+          padding-top: 10px;
+        }
 
-  .foot-links{
-    display: none;
+        .coll {
+          display: block !important;
+        }
 
-  }
+        .foot-links {
+          display: none;
 
-  .mobile{
-    display: block;
-  }
+        }
 
-  .fa-sign-in{
-    display: block;
-    float: right;
-    margin-right: 5%;
-    margin-top: 7px;
-  }
-  .nav-link{
-    padding-left: 10px !important;
-    border-bottom: 2px solid #52528c;
-  }
-  .footer-wid-heading{
-    font-size: 18px;
-    padding-left: 5px;
-  }
-  
-  
-}
+        .mobile {
+          display: block;
+        }
 
-.director-corner{
-  margin-top: 70px;
-  border-radius: 10px;
-  width: 90%;
-  margin-right: 5%;
-  margin-left: 5%;
-  box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
-;
-}
-.inside{
-  padding-top: 20px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 50px;
-}
+        .fa-sign-in {
+          display: block;
+          float: right;
+          margin-right: 5%;
+          margin-top: 7px;
+        }
 
-.direct-heading{
-  background-color: #7c9eb2;
-  border-radius: 10px 10px 0 0;
-  text-align: center;
-  padding: 10px;
-  font-size: 24px;
-  font-weight: 600;
-}
-.d-im{
-  min-width: 150px;
-  max-height: 150px;
-}
-.direct-cont{
-  margin-left: 10px;
-  color: black !important;
-}
-@media screen and (max-width: 810px){
-  .d-im, .direct-cont{
-    margin-left: auto;
-    margin-right: auto;
-  }
+        .nav-link {
+          padding-left: 10px !important;
+          border-bottom: 2px solid #52528c;
+        }
 
-  .direct-cont{
-    margin-top: 25px;
-  }
-}
+        .footer-wid-heading {
+          font-size: 18px;
+          padding-left: 5px;
+        }
+
+
+      }
+
+      .director-corner {
+        margin-top: 70px;
+        border-radius: 10px;
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        box-shadow:
+          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+          0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+          0 100px 80px rgba(0, 0, 0, 0.12);
+      }
+
+      .inside {
+        padding-top: 20px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 50px;
+      }
+
+      .direct-heading {
+        background-color: #7c9eb2;
+        border-radius: 10px 10px 0 0;
+        text-align: center;
+        padding: 10px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .d-im {
+        min-width: 150px;
+        max-height: 150px;
+      }
+
+      .direct-cont {
+        margin-left: 10px;
+        color: black !important;
+      }
+
+      @media screen and (max-width: 810px) {
+
+        .d-im,
+        .direct-cont {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .direct-cont {
+          margin-top: 25px;
+        }
+      }
+    </style>
+
+    <style>
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: rgb(192, 221, 255);
+        ;
+      }
+
+      .flex-container>div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        border-radius: 50%;
+        background-color: aliceblue;
+        border-color: blue;
+        border-width: 3px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      box {
+        height: 1000px;
+        width: 10000px;
+        background-color: #000;
+      }
+
+      @media screen and (max-width: 810px) {
+
+        .flex-container>div {
+          background-color: #f1f1f1;
+          width: 50px;
+          height: 50px;
+          margin: 5px;
+          border-radius: 50%;
+          background-color: aliceblue;
+          border-color: blue;
+          border-width: 3px;
+          text-align: center;
+          line-height: 50px;
+          font-size: 15px;
+        }
+      }
     </style>
 
 
   </head>
 
   <body>
-    <div id="bg">
+    <div id="bg" style="transition: 2s;">
 
 
       <!-- navigation bar-->
-      <nav class="navbar navbar-expand-md navbar-light sticky-top">
+      <nav class="navbar navbar-expand-md navbar-light sticky-top" style="height: auto;">
 
         <div class="container-fluid" id='image' style="color: black">
           <div class="title">Mnit</div>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menue" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menue"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            aria-label="Main Menu">
             X
           </button>
           <div class="navbar-collapse collapse" id="navbar-menue">
@@ -787,7 +910,7 @@ img {vertical-align: middle;}
               </div>
               <div class="box2">
                 <a class="nav-item nav-link" onclick="dark()">
-                  <p style="color: rgb(54, 54, 54);">Dark Mode <br></p>
+                  <button style="color: rgb(138, 138, 138); background-color:black; border-radius:20%">Dark Mode <br></button>
                 </a>
               </div>
 
@@ -800,13 +923,18 @@ img {vertical-align: middle;}
       <div class="line"></div>
 
       <p align="center" style="font-style: italic; color: black">Vidya dadati binayang</p>
-      <button onclick="change_back()" class="glow" id="land">Land</button>
+
+
 
 
       <div style='padding-top:6%;padding-bottom:6%'>
         <div class="container-fluid" style="height: 100%">
           <div class="row" style="height: 100%">
-            <div id="image" class="col-lg-8" style="height: 100%">
+
+            <div id="image" class="col-lg-8" style="height: 100%" style="display: none;">
+              <div class="box" style="height: 400px; width: 30%">
+              </div>
+              <button onclick="change_back()" class="glow" id="land">Land</button>
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -844,7 +972,7 @@ img {vertical-align: middle;}
                         backdrop-filter: blur( 4px );
                         -webkit-backdrop-filter: blur( 4px );
                         padding:4px;
-                        border-radius: 10px;" data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        border-radius: 10px;" data-aos="fade-in" data-aos-easing="ease-in-sine">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure saepe eaque
                     exercitationem voluptatibus labore, harum iusto, laboriosam dignissimos unde aliquid.
                     Commodi consequuntur sed autem modi rem, nobis possimus aspernatur?
@@ -861,7 +989,7 @@ img {vertical-align: middle;}
                     backdrop-filter: blur( 4px );
                       padding:4px;
                     -webkit-backdrop-filter: blur( 4px );
-                    border-radius: 10px;" data-aos="fade-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    border-radius: 10px;" data-aos="fade-in" data-aos-easing="ease-in-sine">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora iure saepe eaque
                     exercitationem voluptatibus labore, harum iusto, laboriosam dignissimos unde aliquid.
                     Commodi consequuntur sed autem modi rem, nobis possimus aspernatur?
@@ -878,233 +1006,193 @@ img {vertical-align: middle;}
     </div>
     <br>
 
-    <div id='bd' style="margin-top:40px">
-
-
-
+    <div id="sec2" class="section2">
+    <div id='bd' style="margin-top:40px; transition: 2s;">
       <h2 align="center">Quick Links</h2>
       <div class="line"></div>
 
     </div>
+     
 
 
-    <div id='bamm' class="container-fluid" style="height: 20%; width: 100">
+    <div id='bamm' class="container-fluid" style="height: 20%; width: 100; background-color: aliceblue; transition: 2s;">
       <br>
-      <div id="lower" class="row" style="height: 60%">
-        <div class="col-lg-11" style="height: 100%; margin: auto">
-          <div class="row" style="height: 100%">
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
-
-            </div>
-
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
-
-            </div>
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%; background-color:rgb(128, 127, 127);width: 75%;margin:auto">
-
-            </div>
-            <div id="lower_link" class="col-lg-1 dp" style="height: 100%;">
-
-            </div>
-          </div>
+      <div id="lower" class="row" style="height: 60%; justify-content: center; background-color: rgb(192, 221, 255);"
+        align='center'>
+        <div class="flex-container" align=center>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
         </div>
       </div>
-
-
     </div>
 
-<div id="sec2" class="section2">
-    <div id="news" class="news row" data-aos="fade-up">
-      <div class="news-text col-sm-2">NEWS</div>
-      <div class="news-items col-sm-10">
-        <marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">MNIT Jaipur Ranked 35 in NIRF
-          Ranking | Time Table Odd Semester
-        </marquee>
+    
+    
+    
+      <div id="news" class="news row" data-aos="fade-up">
+        <div class="news-text col-sm-2">NEWS</div>
+        <div class="news-items col-sm-10">
+          <marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">MNIT Jaipur Ranked 35 in NIRF
+            Ranking | Time Table Odd Semester
+          </marquee>
+        </div>
       </div>
-    </div>
-    <div id="notice-board" class="notice-board" data-aos="fade-up">
-      <!-- <ul class="board-nav">
+      <div id="notice-board" class="notice-board" data-aos="fade-up">
+        <!-- <ul class="board-nav">
           <li><a class="but" id = 'b1' href="javascript:void(0)">Latest News</a></li>
           <li><a class="but" id = 'b2' href="javascript:void(0)">Upcoming Events</a></li>
           <li><a class="but" id = 'b3' href="javascript:void(0)">Student's Corner</a></li>
           <li><a class="but" id = 'b4' href="javascript:void(0)">Vacancies</a></li>
           <li><a class="but" id = 'b5' href="javascript:void(0)">Tender</a></li>
         </ul> -->
-      <div class="board-nav" >
-        <a class="but" id='b1' href="javascript:void(0)">News</a>
-        <a class="y but c" id='b2' href="javascript:void(0)">Events</a>
-        <a class="y but c" id='b3' href="javascript:void(0)">Student Corner</a>
-        <a class="y but c" id='b4' href="javascript:void(0)">Vacancy</a>
-        <a class="y but c" id='b5' href="javascript:void(0)">Tender</a>
-      </div>
-      <div id="board-box1" class="board-box">
-        <p class="board-content">
-          <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
-            onmouseout="this.start()">
-            <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
-              Institute/Hostel</a>
-            <hr>
-            <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
-            <hr>
-            <a href="#">Notification regarding 15th Annual Convocation</a>
-            <hr>
-            <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
-            <hr>
-            <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
-            <hr>
-          </marquee>
-        </p>
-      </div>
-      <div id="board-box2" class="board-box box-hide">
-        <p class="board-content">
-          <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
-            onmouseout="this.start()">
-            <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
-              Institute/Hostel</a>
-            <hr>
-            <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
-            <hr>
-            <a href="#">Notification regarding 15th Annual Convocation</a>
-            <hr>
-            <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
-            <hr>
-            <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
-            <hr>
-          </marquee>
-        </p>
-      </div>
-      <div id="board-box3" class="board-box box-hide">
-        <p class="board-content">
-          <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
-            onmouseout="this.start()">
-            <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
-              Institute/Hostel</a>
-            <hr>
-            <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
-            <hr>
-            <a href="#">Notification regarding 15th Annual Convocation</a>
-            <hr>
-            <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
-            <hr>
-            <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
-            <hr>
-          </marquee>
-        </p>
-      </div>
-      <div id="board-box4" class="board-box box-hide">
-        <p class="board-content">
-          <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
-            onmouseout="this.start()">
-            <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
-              Institute/Hostel</a>
-            <hr>
-            <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
-            <hr>
-            <a href="#">Notification regarding 15th Annual Convocation</a>
-            <hr>
-            <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
-            <hr>
-            <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
-            <hr>
-          </marquee>
-        </p>
-      </div>
-      <div id="board-box5" class="board-box box-hide">
-        <p class="board-content">
-          <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
-            onmouseout="this.start()">
-            <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
-              Institute/Hostel</a>
-            <hr>
-            <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
-            <hr>
-            <a href="#">Notification regarding 15th Annual Convocation</a>
-            <hr>
-            <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
-            <hr>
-            <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
-            <hr>
-          </marquee>
-        </p>
+        <div class="board-nav">
+          <a class="but" id='b1' href="javascript:void(0)">News</a>
+          <a class="y but c" id='b2' href="javascript:void(0)">Events</a>
+          <a class="y but c" id='b3' href="javascript:void(0)">Student Corner</a>
+          <a class="y but c" id='b4' href="javascript:void(0)">Vacancy</a>
+          <a class="y but c" id='b5' href="javascript:void(0)">Tender</a>
+        </div>
+        <div id="board-box1" class="board-box">
+          <p class="board-content">
+            <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
+              onmouseout="this.start()">
+              <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
+                Institute/Hostel</a>
+              <hr>
+              <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
+              <hr>
+              <a href="#">Notification regarding 15th Annual Convocation</a>
+              <hr>
+              <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
+              <hr>
+              <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
+              <hr>
+            </marquee>
+          </p>
+        </div>
+        <div id="board-box2" class="board-box box-hide">
+          <p class="board-content">
+            <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
+              onmouseout="this.start()">
+              <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
+                Institute/Hostel</a>
+              <hr>
+              <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
+              <hr>
+              <a href="#">Notification regarding 15th Annual Convocation</a>
+              <hr>
+              <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
+              <hr>
+              <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
+              <hr>
+            </marquee>
+          </p>
+        </div>
+        <div id="board-box3" class="board-box box-hide">
+          <p class="board-content">
+            <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
+              onmouseout="this.start()">
+              <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
+                Institute/Hostel</a>
+              <hr>
+              <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
+              <hr>
+              <a href="#">Notification regarding 15th Annual Convocation</a>
+              <hr>
+              <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
+              <hr>
+              <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
+              <hr>
+            </marquee>
+          </p>
+        </div>
+        <div id="board-box4" class="board-box box-hide">
+          <p class="board-content">
+            <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
+              onmouseout="this.start()">
+              <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
+                Institute/Hostel</a>
+              <hr>
+              <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
+              <hr>
+              <a href="#">Notification regarding 15th Annual Convocation</a>
+              <hr>
+              <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
+              <hr>
+              <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
+              <hr>
+            </marquee>
+          </p>
+        </div>
+        <div id="board-box5" class="board-box box-hide">
+          <p class="board-content">
+            <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop()"
+              onmouseout="this.start()">
+              <a href="#">Notice for UG/M.Sc./MBA Final Year Students regarding physical reporting in the
+                Institute/Hostel</a>
+              <hr>
+              <a href="#">Time Table for Online Mid Term Exam of First Year B.Tech. students in Odd Semester 2020-21</a>
+              <hr>
+              <a href="#">Notification regarding 15th Annual Convocation</a>
+              <hr>
+              <a href="#">Guidelines for PhD Entrance Exam Even Semester 2020-21 & Model MCQ, Syllabus</a>
+              <hr>
+              <a href="#">Notice for Final Year UG Students Regarding Reopening the Institute</a>
+              <hr>
+            </marquee>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <br><br>
+    <br><br>
 
-  <div class="sec3" style="margin: auto;">
-    <div class="campus row" style="margin: auto;">
-      <div class="photos col-12" style="margin: auto;">
-        <p class="campus-head" data-aos="fade-up">Photo Gallery</p>
-        <div data-aos="fade-up">
-          <div class="line" data-aos="flip-left" data-aos-duration="3000"></div>
-        </div>
+    <div class="sec3" style="margin: auto;">
+      <div class="campus row" style="margin: auto;">
+        <div class="photos col-12" style="margin: auto;">
+          <p class="campus-head" data-aos="fade-up">Photo Gallery</p>
 
-        <div class="pp pp-desktop row" align='center'>
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg" data-aos="fade-up">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg" data-aos="fade-up">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg" data-aos="fade-up">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg" data-aos="fade-up">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg" data-aos="fade-up">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg" data-aos="fade-up">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg" data-aos="fade-up">
-          <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg" data-aos="fade-up">
+          <div data-aos="fade-up">
+            <div class="line" data-aos="flip-left" data-aos-duration="3000"></div>
+          </div>
 
-        </div>
-        <div class="slideshow-container pp pp-mobile row">
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg"></div>
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"></div>
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg"></div>
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg"></div>
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"></div>
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg"></div>
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg"></div>
-          <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"></div>
-          <a class="prev" onclick="plusSlides(-1)" style="background: rgba( 255, 255, 255, 0.25 );
+          <div class="pp pp-desktop row" align='center'>
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg" data-aos="fade-up">
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg" data-aos="fade-up">
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg" data-aos="fade-up">
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg" data-aos="fade-up">
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg" data-aos="fade-up">
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg" data-aos="fade-up">
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg" data-aos="fade-up">
+            <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg" data-aos="fade-up">
+
+          </div>
+          <div class="slideshow-container pp pp-mobile row">
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg"></div>
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"></div>
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg"></div>
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg"></div>
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"></div>
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg"></div>
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg"></div>
+            <div class="mySlides"><img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"></div>
+            <a class="prev" onclick="plusSlides(-1)" style="background: rgba( 255, 255, 255, 0.25 );
           box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
           backdrop-filter: blur( 4px );
           -webkit-backdrop-filter: blur( 4px );
           border-radius: 10px;">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)" style="background: rgba( 255, 255, 255, 0.25 );
+            <a class="next" onclick="plusSlides(1)" style="background: rgba( 255, 255, 255, 0.25 );
           box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
           backdrop-filter: blur( 4px );
           -webkit-backdrop-filter: blur( 4px );
           border-radius: 10px;">&#10095;</a>
 
-          <!-- <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg">
+            <!-- <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg">
           <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img9.jpg">
           <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg">
           <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg">
@@ -1112,225 +1200,244 @@ img {vertical-align: middle;}
           <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img6.jpg">
           <img class="p-img col-lg-3 col-sm-11 col-md-4" src="Images/Homepage/img8.jpg"> -->
 
+
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
 
-<div class="director-corner row">
+    <div class="director-corner row">
       <p style="width: 100%;" class="direct-heading">Director's Corner</p>
       <br>
       <div class="inside row">
+        <!--
         <img class="col-2 d-im" src="Images/Homepage/direc.jpg">
-        <div class="col-9 direct-cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur consequat dignissim. Maecenas tristique fermentum lorem sit amet molestie. Donec nec gravida sapien. Curabitur facilisis placerat magna, consectetur feugiat neque consectetur quis. Donec at neque id massa placerat pellentesque. Ut vehicula commodo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur consequat dignissim. Maecenas tristique fermentum lorem sit amet molestie. Donec nec gravida sapien. Curabitur facilisis placerat magna, consectetur feugiat neque consectetur quis. Donec at neque id massa placerat pellentesque. Ut vehicula commodo</div>
+        -->
+        <div class="col-9 direct-cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur
+          consequat dignissim. Maecenas tristique fermentum lorem sit amet molestie. Donec nec gravida sapien. Curabitur
+          facilisis placerat magna, consectetur feugiat neque consectetur quis. Donec at neque id massa placerat
+          pellentesque. Ut vehicula commodo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur
+          consequat dignissim. Maecenas tristique fermentum lorem sit amet molestie. Donec nec gravida sapien. Curabitur
+          facilisis placerat magna, consectetur feugiat neque consectetur quis. Donec at neque id massa placerat
+          pellentesque. Ut vehicula commodo</div>
       </div>
-  </div>
-
-  <!--Footer Start-->
-
-  <div class="footer desktop">
-    <div class="part1 row">
-      <div class="foot-wid Quick Links col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading" data-aos="fade-up">Useful Links</p>
-        <ul class="foot-links" data-aos="fade-up">
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-        </ul>
-      </div>
-      <div class="foot-wid portals col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading" data-aos="fade-up">Portals</p>
-        <ul class="foot-links" data-aos="fade-up">
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-        </ul>
-      </div>
-      <div class="foot-wid explore col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading" data-aos="fade-up">Explore</p>
-        <ul class="foot-links" data-aos="fade-up">
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-
-        </ul>
-      </div>
-      <div class="foot-wid contact col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading" data-aos="fade-up">MNIT Jaipur</p>
-        <ul class="foot-links coll" data-aos="fade-up">
-          <li>
-            <a class="location" href="#"><i class="fas fa-map-marked-alt fa-2x"></i>
-              <p class="add">Jawahar Lal Nehru Marg, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan</p>
-            </a>
-          </li>
-          <li class="social"><a class="foot-items" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a class="foot-items" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
-            <a class="foot-items" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-          </li>
-        </ul>
-      </div>
-
     </div>
-    <div class="part2">
-      © 2021 Malaviya National Institute of Technology Jaipur, Rajasthan, India. All rights reserved.
+
+    <!--Footer Start-->
+
+    <div class="footer desktop">
+      <div class="part1 row">
+        <div class="foot-wid Quick Links col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">Useful Links</p>
+          <ul class="foot-links" data-aos="fade-up">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="foot-wid portals col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">Portals</p>
+          <ul class="foot-links" data-aos="fade-up">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="foot-wid explore col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">Explore</p>
+          <ul class="foot-links" data-aos="fade-up">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+
+          </ul>
+        </div>
+        <div class="foot-wid contact col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading" data-aos="fade-up">MNIT Jaipur</p>
+          <ul class="foot-links coll" data-aos="fade-up">
+            <li>
+              <a class="location" href="#"><i class="fas fa-map-marked-alt fa-2x"></i>
+                <p class="add">Jawahar Lal Nehru Marg, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan</p>
+              </a>
+            </li>
+            <li class="social"><a class="foot-items" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="part2">
+        © 2021 Malaviya National Institute of Technology Jaipur, Rajasthan, India. All rights reserved.
+      </div>
     </div>
-  </div>
 
-  <div class="footer mobile">
-    <div class="part1 row">
-      <div class="foot-wid Quick Links col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading foot-h1">Useful Links <i class="fa fa-sign-in" aria-hidden="true"></i></p>
-        <ul class="foot-links foot-l1">
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-        </ul>
-      </div>
-      <div class="foot-wid portals col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading foot-h2">Portals <i class="fa fa-sign-in" aria-hidden="true"></i></p>
-        <ul class="foot-links foot-l2">
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-        </ul>
-      </div>
-      <div class="foot-wid explore col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading foot-h3">Explore <i class="fa fa-sign-in" aria-hidden="true"></i></p>
-        <ul class="foot-links foot-l3">
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
-          <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+    <div class="footer mobile">
+      <div class="part1 row">
+        <div class="foot-wid Quick Links col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading foot-h1">Useful Links <i class="fa fa-sign-in" aria-hidden="true"></i></p>
+          <ul class="foot-links foot-l1">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="foot-wid portals col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading foot-h2">Portals <i class="fa fa-sign-in" aria-hidden="true"></i></p>
+          <ul class="foot-links foot-l2">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="foot-wid explore col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading foot-h3">Explore <i class="fa fa-sign-in" aria-hidden="true"></i></p>
+          <ul class="foot-links foot-l3">
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
+            <li><a class="foot-items" href="#">Lorem Ipsum</a></li>
 
-        </ul>
-      </div>
-      <div class="foot-wid contact col-lg-3 col-md-12 col-sm-12">
-        <p class="footer-wid-heading">MNIT Jaipur</p>
-        <ul class="foot-links coll">
-          <li>
-            <a class="location" href="#"><i class="fas fa-map-marked-alt fa-2x"></i>
-              <p class="add">Jawahar Lal Nehru Marg, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan</p>
-            </a>
-          </li>
-          <li class="social"><a class="foot-items" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a class="foot-items" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
-            <a class="foot-items" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-          </li>
-        </ul>
-      </div>
+          </ul>
+        </div>
+        <div class="foot-wid contact col-lg-3 col-md-12 col-sm-12">
+          <p class="footer-wid-heading">MNIT Jaipur</p>
+          <ul class="foot-links coll">
+            <li>
+              <a class="location" href="#"><i class="fas fa-map-marked-alt fa-2x"></i>
+                <p class="add">Jawahar Lal Nehru Marg, Jhalana Gram, Malviya Nagar, Jaipur, Rajasthan</p>
+              </a>
+            </li>
+            <li class="social"><a class="foot-items" href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+              <a class="foot-items" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </li>
+          </ul>
+        </div>
 
+      </div>
+      <div class="part2">
+        © 2021 Malaviya National Institute of Technology Jaipur, Rajasthan, India. All rights reserved.
+      </div>
     </div>
-    <div class="part2">
-      © 2021 Malaviya National Institute of Technology Jaipur, Rajasthan, India. All rights reserved.
-    </div>
-  </div>
 
-  <!--Footer End-->
-  <script>
-    $("#theme2").click(function(){
-      $('#nav').css({
-        'background-color': '#F56320'
-      });
-      $('.news-text').css({
-        'background-color': '#F56320'
-      });
-      $('.direct-heading').css({
-        'background-color': '#F56320'
-      });
-      if ($('.but').hasClass('c'))
-      {$('.but').removeClass('c');
-      $('.but').addClass('z');
-          }
-    })
-    $("#theme1").click(function(){
-      $('#nav').css({
-        'background-color': '#7c9eb2'
-      });
-      $('.news-text').css({
-        'background-color': '#7C9EB2'
-      });
-      $('.direct-heading').css({
-        'background-color': '#7C9EB2'
-      });
-      if ($('.but').hasClass('z'))
-      {$('.but').removeClass('z');
-      $('.but').addClass('c');
-          }
-    })
+
+    <!--Footer End-->
+    <script>
+      $("#theme2").click(function () {
+        $('#nav').css({
+          'background-color': '#F56320'
+        });
+        $('.news-text').css({
+          'background-color': '#F56320'
+        });
+        $('.direct-heading').css({
+          'background-color': '#F56320'
+        });
+        if ($('.but').hasClass('c')) {
+          $('.but').removeClass('c');
+          $('.but').addClass('z');
+        }
+      })
+      $("#theme1").click(function () {
+        $('#nav').css({
+          'background-color': '#7c9eb2'
+        });
+        $('.news-text').css({
+          'background-color': '#7C9EB2'
+        });
+        $('.direct-heading').css({
+          'background-color': '#7C9EB2'
+        });
+        if ($('.but').hasClass('z')) {
+          $('.but').removeClass('z');
+          $('.but').addClass('c');
+        }
+      })
     </script>
 
-  <!--Scripts-->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script>
+    <!--Scripts-->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
 
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      // var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        // var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
+        }
+        // for (i = 0; i < dots.length; i++) {
+        //     dots[i].className = dots[i].className.replace(" active", "");
+        // }
+        slides[slideIndex - 1].style.display = "block";
       }
-      // for (i = 0; i < dots.length; i++) {
-      //     dots[i].className = dots[i].className.replace(" active", "");
-      // }
-      slides[slideIndex-1].style.display = "block";
-    }
     </script>
 
-  <script>
-    $(".nav-link").click(function () {
-      $(".clicked").removeClass("clicked");
-      $(this).addClass("clicked");
-    });
-  </script>
+    <script>
+      $(".nav-link").click(function () {
+        $(".clicked").removeClass("clicked");
+        $(this).addClass("clicked");
+      });
+    </script>
 
-  <script>
-    $(".foot-h1").click(function () {
-      if ($(".foot-l1").hasClass("dis")) {
-        $(".foot-l1").removeClass("dis");
-      } else {
-        $(".foot-l1").addClass("dis");
-      }
-    });
-    $(".foot-h2").click(function () {
-      if ($(".foot-l2").hasClass("dis")) {
-        $(".foot-l2").removeClass("dis");
-      } else {
-        $(".foot-l2").addClass("dis");
-      }
-    });
-    $(".foot-h3").click(function () {
-      if ($(".foot-l3").hasClass("dis")) {
-        $(".foot-l3").removeClass("dis");
-      } else {
-        $(".foot-l3").addClass("dis");
-      }
-    });
-  </script>
-<!-- <script>
+    <script>
+      $(".foot-h1").click(function () {
+        if ($(".foot-l1").hasClass("dis")) {
+          $(".foot-l1").removeClass("dis");
+        } else {
+          $(".foot-l1").addClass("dis");
+        }
+      });
+      $(".foot-h2").click(function () {
+        if ($(".foot-l2").hasClass("dis")) {
+          $(".foot-l2").removeClass("dis");
+        } else {
+          $(".foot-l2").addClass("dis");
+        }
+      });
+      $(".foot-h3").click(function () {
+        if ($(".foot-l3").hasClass("dis")) {
+          $(".foot-l3").removeClass("dis");
+        } else {
+          $(".foot-l3").addClass("dis");
+        }
+      });
+    </script>
+    <!-- <script>
 $('#theme1' ).click(function (){
 $('#nav').addClass("red");
 $('.direct-heading').addClass("red");
@@ -1350,76 +1457,87 @@ if ($('.news-text').hasClass("red");)
 { $('.news-text').addClass("red");}
 });
 </script> -->
-  <script>
-    AOS.init();
-  </script>
+    <script>
+      AOS.init();
+    </script>
 
-  <script>
-  var a=0;
-    $(".but").click(function () {
-      $(".board-box").addClass("box-hide");
-      if (a===0){
-      $(".but").addClass("c");}
-    else {
-      $(".but").addClass("z");
-    }    });
-    $("#b1").click(function () {
-      $("#board-box1").removeClass("box-hide");
-      if ($('#b1').hasClass("c")){
+    <script>
+      var a = 0;
+      $(".but").click(function () {
+        $(".board-box").addClass("box-hide");
+        if (a === 0) {
+          $(".but").addClass("c");
+        } else {
+          $(".but").addClass("z");
+        }
+      });
+      $("#b1").click(function () {
+        $("#board-box1").removeClass("box-hide");
+        if ($('#b1').hasClass("c")) {
 
-        a=0;
-      $('#b1').removeClass("c");}
+          a = 0;
+          $('#b1').removeClass("c");
+        }
 
-      if ($('#b1').hasClass("z")){
-        a=1;
-      $('#b1').removeClass("z");}
-    });
-    $("#b2").click(function () {
-      $("#board-box2").removeClass("box-hide");
-      if ($('#b2').hasClass("c")){
-        a=0;
-      $('#b2').removeClass("c");}
+        if ($('#b1').hasClass("z")) {
+          a = 1;
+          $('#b1').removeClass("z");
+        }
+      });
+      $("#b2").click(function () {
+        $("#board-box2").removeClass("box-hide");
+        if ($('#b2').hasClass("c")) {
+          a = 0;
+          $('#b2').removeClass("c");
+        }
 
-      if ($('#b2').hasClass("z")){
-        a=1;
-      $('#b2').removeClass("z");}
-    });
-    $("#b3").click(function () {
-      $("#board-box3").removeClass("box-hide");
-      if ($('#b3').hasClass("c")){
-        a=0;
-      $('#b3').removeClass("c");}
+        if ($('#b2').hasClass("z")) {
+          a = 1;
+          $('#b2').removeClass("z");
+        }
+      });
+      $("#b3").click(function () {
+        $("#board-box3").removeClass("box-hide");
+        if ($('#b3').hasClass("c")) {
+          a = 0;
+          $('#b3').removeClass("c");
+        }
 
-      if ($('#b3').hasClass("z")){
-        a=1;
-      $('#b3').removeClass("z");}
-    });
-    $("#b4").click(function () {
-      $("#board-box4").removeClass("box-hide");
-      if ($('#b4').hasClass("c")){
-        a=0;
-      $('#b4').removeClass("c");}
+        if ($('#b3').hasClass("z")) {
+          a = 1;
+          $('#b3').removeClass("z");
+        }
+      });
+      $("#b4").click(function () {
+        $("#board-box4").removeClass("box-hide");
+        if ($('#b4').hasClass("c")) {
+          a = 0;
+          $('#b4').removeClass("c");
+        }
 
-      if ($('#b4').hasClass("z")){
-        a=1;
-      $('#b4').removeClass("z");}
-    });
-    $('#b5').click(function () {
-      $("#board-box5").removeClass("box-hide");
-      if ($('#b5').hasClass("c")){
-        a=0;
-      $('#b5').removeClass("c");}
+        if ($('#b4').hasClass("z")) {
+          a = 1;
+          $('#b4').removeClass("z");
+        }
+      });
+      $('#b5').click(function () {
+        $("#board-box5").removeClass("box-hide");
+        if ($('#b5').hasClass("c")) {
+          a = 0;
+          $('#b5').removeClass("c");
+        }
 
-      if ($('#b5').hasClass("z")){
-        a=1;
-      $('#b5').removeClass("z");}
-    });
-  </script>
+        if ($('#b5').hasClass("z")) {
+          a = 1;
+          $('#b5').removeClass("z");
+        }
+      });
+    </script>
 
 
-  <script>
+    <script>
 
-  </script>
+    </script>
 
 
     <script>
@@ -1436,18 +1554,23 @@ if ($('.news-text').hasClass("red");)
         document.getElementById("land").style.display = 'None';
         //   document.getElementByClass("image").style.opacity = '0';
 
-        setTimeout(function() {
+        setTimeout(function () {
           document.getElementById("bg").style.backgroundImage = "url(./img/mnit_front.jpeg)";
           document.getElementById("bg").style.backgroundRepeat = "no-repeat";
           document.getElementById("bg").style.backgroundSize = "cover";
           document.getElementById("bg").style.backgroundPosition = "center";
           document.getElementById("bg").style.backgroundAttachment = "fixed";
+
+          // document.getElementsByClassName("#image").style.display = 'visible';
+          
           console.log(document.getElementsByClassName("image"));
+
           var i = 0;
           for (i = 0; i < 3; i++) {
-            document.getElementsByClassName("image")[i].style.opacity = '1';
+            
 
           }
+          
         }, 9000);
 
 
